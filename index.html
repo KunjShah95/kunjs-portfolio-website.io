@@ -268,91 +268,6 @@
         min-height: 380px;
       }
     }
-
-    /* 3D Glassmorphism Effect */
-    .glass-3d {
-      background: rgba(20, 20, 30, 0.7);
-      backdrop-filter: blur(18px) saturate(1.2);
-      border-radius: 2rem;
-      box-shadow: 0 8px 40px 0 rgba(14, 165, 233, 0.18), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-      perspective: 1200px;
-      transform-style: preserve-3d;
-    }
-
-    .glass-3d:hover {
-      transform: rotateY(8deg) scale(1.03) translateY(-8px);
-      box-shadow: 0 16px 64px 0 rgba(14, 165, 233, 0.22), 0 4px 16px 0 rgba(0, 0, 0, 0.16);
-    }
-
-    /* Gradient Text Animation */
-    .animated-gradient-text {
-      background: linear-gradient(90deg, #0ea5e9, #818cf8, #f59e0b, #0ea5e9);
-      background-size: 200% 200%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientMove 4s ease-in-out infinite;
-    }
-
-    @keyframes gradientMove {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    /* Fade In Up Animation */
-    .animate-fade-in-up {
-      animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) both;
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.98);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    /* Badge Style for Project Tags */
-    .glass-badge {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255, 255, 255, 0.10);
-    }
-
-    /* 3D Action Button Style */
-    .action-btn-3d {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.6rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      font-size: 1rem;
-      background: linear-gradient(90deg, #0ea5e9 0%, #818cf8 100%);
-      color: #fff;
-      box-shadow: 0 2px 12px 0 rgba(14, 165, 233, 0.13);
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
-      will-change: transform;
-    }
-
-    .action-btn-3d:hover {
-      background: linear-gradient(90deg, #818cf8 0%, #0ea5e9 100%);
-      color: #fff;
-      box-shadow: 0 6px 24px 0 rgba(99, 102, 241, 0.18);
-      transform: translateY(-2px) scale(1.06) rotateX(6deg);
-    }
   </style>
 </head>
 
@@ -742,27 +657,35 @@
       </div>
 
       <!-- Projects grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
-        <!-- Example Project Card (repeat for each project) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
         <!-- PAYMAN AI -->
-        <div class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-3xl shadow-2xl border border-neutral-800/40 hover:shadow-3xl hover:border-primary-500/60 transition-all duration-500 overflow-hidden glass-3d animate-fade-in-up">
-          <div class="relative overflow-hidden rounded-t-3xl h-60">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="PAYMAN AI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-neutral-900 will-change-transform">
+        <div
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+              alt="PAYMAN AI"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
           </div>
-          <div class="p-8 flex flex-col h-80">
-            <h3 class="text-3xl font-extrabold text-neutral-100 mb-3 drop-shadow-lg animated-gradient-text">PAYMAN AI</h3>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="px-4 py-1 rounded-full bg-primary-500/30 text-xs text-primary-200 font-semibold tracking-wide glass-badge shadow-md">Python</span>
-              <span class="px-4 py-1 rounded-full bg-primary-500/30 text-xs text-primary-200 font-semibold tracking-wide glass-badge shadow-md">AI</span>
-              <span class="px-4 py-1 rounded-full bg-primary-500/30 text-xs text-primary-200 font-semibold tracking-wide glass-badge shadow-md">Property Management</span>
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">PAYMAN AI</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">Python</span>
+              <span
+                class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">AI</span>
+              <span
+                class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">Property
+                Management</span>
             </div>
-            <p class="text-neutral-300 mb-8 line-clamp-3 flex-1">AI-powered payment management system for property owners. Automated reminders, payment tracking, and analytics.</p>
-            <div class="flex justify-between items-center mt-auto gap-3">
-              <a href="https://github.com/KunjShah95/PAYMAN-AI-PROJECT" target="_blank" class="action-btn-3d">
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">AI-powered payment management system for property
+              owners. Automated reminders, payment tracking, and analytics.</p>
+            <div class="flex justify-between items-center mt-auto gap-2">
+              <a href="https://github.com/KunjShah95/PAYMAN-AI-PROJECT" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://payman-ai-project.vercel.app/" target="_blank" class="action-btn-3d">
+              <a href="https://payman-ai-project.vercel.app/" target="_blank" class="action-btn">
                 Live Demo <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
@@ -771,31 +694,31 @@
 
         <!-- DeepSeek R1 Implementation -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-3xl shadow-2xl border border-neutral-800/40 hover:shadow-3xl hover:border-primary-500/60 transition-all duration-500 overflow-hidden glass-3d animate-fade-in-up"
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
           data-category="ai">
-          <div class="relative overflow-hidden rounded-t-3xl h-60">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img src="images/image.png" alt="DeepSeek R1 Implementation"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-neutral-900">
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
           </div>
-          <div class="p-8 flex flex-col h-80">
-            <h3 class="text-3xl font-extrabold text-neutral-100 mb-3 drop-shadow-lg animated-gradient-text">DeepSeek R1 Implementation</h3>
-            <div class="flex flex-wrap gap-2 mb-5">
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">DeepSeek R1 Implementation</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
               <span
-                class="px-4 py-1 rounded-full bg-blue-500/30 text-xs text-blue-200 font-semibold tracking-wide glass-badge shadow-md">Python</span>
+                class="px-3 py-1 rounded-full bg-blue-500/20 text-xs text-blue-200 font-semibold tracking-wide">Python</span>
               <span
-                class="px-4 py-1 rounded-full bg-blue-500/30 text-xs text-blue-200 font-semibold tracking-wide glass-badge shadow-md">LLM</span>
+                class="px-3 py-1 rounded-full bg-blue-500/20 text-xs text-blue-200 font-semibold tracking-wide">LLM</span>
               <span
-                class="px-4 py-1 rounded-full bg-blue-500/30 text-xs text-blue-200 font-semibold tracking-wide glass-badge shadow-md">Reinforcement
+                class="px-3 py-1 rounded-full bg-blue-500/20 text-xs text-blue-200 font-semibold tracking-wide">Reinforcement
                 Learning</span>
             </div>
-            <p class="text-neutral-300 mb-8 line-clamp-3 flex-1">
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">
               Python implementation of DeepSeek R1 with advanced RL techniques and detailed training process
               documentation.
             </p>
-            <div class="flex justify-between items-center mt-auto gap-3">
+            <div class="flex justify-between items-center mt-auto gap-2">
               <a href="https://github.com/KunjShah95/Building-DeepSeek-R1-from-Scratch-Using-Python" target="_blank"
-                class="action-btn-3d">
+                class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
               <span></span>
@@ -805,37 +728,37 @@
 
         <!-- Sentiment Analysis MCP -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-3xl shadow-2xl border border-neutral-800/40 hover:shadow-3xl hover:border-primary-500/60 transition-all duration-500 overflow-hidden glass-3d animate-fade-in-up"
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
           data-category="ai">
-          <div class="relative overflow-hidden rounded-t-3xl h-60">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img
               src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
               alt="Sentiment Analysis MCP"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-neutral-900">
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
           </div>
-          <div class="p-8 flex flex-col h-80">
-            <h3 class="text-3xl font-extrabold text-neutral-100 mb-3 drop-shadow-lg animated-gradient-text">Sentiment Analysis MCP</h3>
-            <div class="flex flex-wrap gap-2 mb-5">
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">Sentiment Analysis MCP</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">Python</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Python</span>
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">MCP</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">MCP</span>
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">NLP</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">NLP</span>
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">Sentiment
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Sentiment
                 Analysis</span>
             </div>
-            <p class="text-neutral-300 mb-8 line-clamp-3 flex-1">
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">
               Model Context Protocol (MCP) server for sentiment analysis using advanced NLP techniques. Provides
               real-time sentiment scoring and analysis capabilities.
             </p>
-            <div class="flex justify-between items-center mt-auto gap-3">
-              <a href="https://github.com/KunjShah01/sentiment-analysis-mcp" target="_blank" class="action-btn-3d">
+            <div class="flex justify-between items-center mt-auto gap-2">
+              <a href="https://github.com/KunjShah01/sentiment-analysis-mcp" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://huggingface.co/spaces/kunjshah01/mcp-sentiment" target="_blank" class="action-btn-3d">
+              <a href="https://huggingface.co/spaces/kunjshah01/mcp-sentiment" target="_blank" class="action-btn">
                 Try Demo <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
@@ -844,18 +767,18 @@
 
         <!-- Video Broadcaster -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-3xl shadow-2xl border border-neutral-800/40 hover:shadow-3xl hover:border-primary-500/60 transition-all duration-500 overflow-hidden glass-3d animate-fade-in-up"
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
           data-category="ai">
-          <div class="relative overflow-hidden rounded-t-3xl h-60">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img
               src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               alt="Video Broadcaster"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-neutral-900">
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
           </div>
-          <div class="p-8 flex flex-col h-80">
-            <h3 class="text-3xl font-extrabold text-neutral-100 mb-3 drop-shadow-lg animated-gradient-text">Video Broadcaster</h3>
-            <div class="flex flex-wrap gap-2 mb-5">
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">Video Broadcaster</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
               <span
                 class="px-2 py-1 rounded-full bg-accent-500/30 text-xs backdrop-blur-sm text-accent-200">Python</span>
               <span
@@ -865,15 +788,15 @@
               <span class="px-2 py-1 rounded-full bg-accent-500/30 text-xs backdrop-blur-sm text-accent-200">Computer
                 Vision</span>
             </div>
-            <p class="text-neutral-300 mb-8 line-clamp-3 flex-1">
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">
               Modern web-based video broadcasting solution with real-time effects, background blur, virtual camera
               output, and multi-camera support. Features responsive UI and professional video processing.
             </p>
-            <div class="flex justify-between items-center mt-auto gap-3">
-              <a href="https://github.com/KunjShah01/video-broadcaster" target="_blank" class="action-btn-3d">
+            <div class="flex justify-between items-center mt-auto gap-2">
+              <a href="https://github.com/KunjShah01/video-broadcaster" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="" target="_blank" class="action-btn-3d text-sm">
+              <a href="" target="_blank" class="action-btn text-sm">
                 <i class="fas fa-video mr-1"></i> Video Demo
               </a>
             </div>
@@ -882,30 +805,36 @@
 
         <!-- NEXUS-AI.io -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-3xl shadow-2xl border border-neutral-800/40 hover:shadow-3xl hover:border-primary-500/60 transition-all duration-500 overflow-hidden glass-3d animate-fade-in-up"
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
           data-category="ai">
-          <div class="relative overflow-hidden rounded-t-3xl h-60">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
               alt="NEXUS-AI.io"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-neutral-900">
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
           </div>
-          <div class="p-8 flex flex-col h-80">
-            <h3 class="text-3xl font-extrabold text-neutral-100 mb-3 drop-shadow-lg animated-gradient-text">NEXUS-AI.io</h3>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">Python</span>
-              <span class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">AI/ML</span>
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">NEXUS-AI.io</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">Python</span>
+              <span
+                class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">AI/ML</span>
               <span class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">NLP</span>
-              <span class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">Conversational AI</span>
+              <span
+                class="px-2 py-1 rounded-full bg-indigo-500/30 text-xs backdrop-blur-sm text-indigo-200">Conversational
+                AI</span>
             </div>
-            <p class="text-neutral-300 mb-8 line-clamp-3 flex-1">
-              NEXUS-AI.io is an AI-powered terminal assistant designed to help fellow developers. It is safe, secure, and supports integration with multiple LLMs. The assistant is completely free to use and streamlines developer workflows directly from the terminal.
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">
+              NEXUS-AI.io is an advanced conversational AI platform leveraging state-of-the-art NLP and ML models to
+              provide intelligent, context-aware responses for a variety of applications. Features a modern web
+              interface and seamless integration capabilities.
             </p>
-            <div class="flex justify-between items-center mt-auto gap-3">
-              <a href="https://github.com/KunjShah95/NEXUS-AI.io" target="_blank" class="action-btn-3d">
+            <div class="flex justify-between items-center mt-auto gap-2">
+              <a href="https://github.com/KunjShah95/NEXUS-AI.io" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://kunjshah95.github.io/NEXUS-AI.io/" target="_blank" class="action-btn-3d">
+              <a href="https://kunjshah95.github.io/NEXUS-AI.io/" target="_blank" class="action-btn">
                 Website <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
@@ -914,30 +843,30 @@
 
         <!-- GitHub Multi-AI Agent Readme Generator -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-3xl shadow-2xl border border-indigo-700/30 hover:shadow-3xl hover:border-indigo-400/60 transition-all duration-500 overflow-hidden glass-3d animate-fade-in-up">
-          <div class="relative overflow-hidden rounded-t-3xl h-60">
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-indigo-700/30 hover:shadow-2xl hover:border-indigo-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
               alt="GitHub Multi-AI Agent Readme Generator"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-neutral-900">
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-transparent"></div>
           </div>
-          <div class="p-8 flex flex-col h-80">
-            <h3 class="text-3xl font-extrabold text-neutral-100 mb-3 drop-shadow-lg animated-gradient-text">GitHub Multi-AI Agent Readme Generator
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">GitHub Multi-AI Agent Readme Generator
             </h3>
-            <div class="flex flex-wrap gap-2 mb-5">
+            <div class="flex flex-wrap gap-2 mb-4">
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">Python</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Python</span>
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">AI/ML</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">AI/ML</span>
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">Agents</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Agents</span>
               <span
-                class="px-4 py-1 rounded-full bg-indigo-500/30 text-xs text-indigo-200 font-semibold tracking-wide glass-badge shadow-md">Automation</span>
+                class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Automation</span>
             </div>
             <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">An advanced tool that leverages multiple AI agents to
               automatically generate comprehensive and high-quality README files for GitHub repositories. Streamlines
               documentation with intelligent content suggestions and formatting.</p>
-            <div class="flex justify-between items-center mt-auto gap-3">
+            <div class="flex justify-between items-center mt-auto gap-2">
               <a href="https://github.com/KunjShah01/github-multi-ai-agent-readme-generator" target="_blank"
                 class="action-btn-indigo">
                 <i class="fab fa-github mr-2"></i> Code
@@ -1228,6 +1157,44 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <!-- Botpress Chatbot Widget with Minimize/Show Button (Permanent Fix) -->
+  <div id="botpress-chatbot-container"
+    style="position:fixed;bottom:24px;right:24px;z-index:99999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+    <iframe id="botpress-chatbot-iframe"
+      src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/20/05/20250620053508-6M5B6R86.json&config=%7B%22disablePersistHistory%22%3Atrue%7D"
+      style="visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.3s,visibility 0.3s;width:400px;max-width:90vw;height:600px;border:none;border-radius:1.5rem;box-shadow:0 8px 40px #0ea5e980;background:#fff;"
+      allow="clipboard-write; microphone; camera" title="Botpress AI Chatbot Widget">
+    </iframe>
+    <button id="botpress-toggle-btn" aria-label="Open chat"
+      style="background:#0ea5e9;color:#fff;border-radius:50%;width:56px;height:56px;font-size:2rem;box-shadow:0 4px 24px #0ea5e980;border:none;cursor:pointer;z-index:100001;display:flex;align-items:center;justify-content:center;">
+      💬
+    </button>
+  </div>
+  <script>
+    const botpressBtn = document.getElementById('botpress-toggle-btn');
+    const botpressIframe = document.getElementById('botpress-chatbot-iframe');
+    let botpressOpen = false;
+    botpressBtn.onclick = function () {
+      botpressOpen = !botpressOpen;
+      if (botpressOpen) {
+        botpressIframe.style.visibility = 'visible';
+        botpressIframe.style.opacity = '1';
+        botpressIframe.style.pointerEvents = 'auto';
+        botpressBtn.innerText = '✖';
+        botpressBtn.setAttribute('aria-label', 'Close chat');
+      } else {
+        botpressIframe.style.visibility = 'hidden';
+        botpressIframe.style.opacity = '0';
+        botpressIframe.style.pointerEvents = 'none';
+        botpressBtn.innerText = '💬';
+        botpressBtn.setAttribute('aria-label', 'Open chat');
+      }
+    };
+    // Optionally, open on first click only (not auto-open)
+    // botpressIframe.style.visibility = 'hidden';
+    // botpressIframe.style.opacity = '0';
+    // botpressIframe.style.pointerEvents = 'none';
+  </script>
 </body>
 
 </html>
