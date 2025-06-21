@@ -257,15 +257,463 @@
       border-bottom-right-radius: 0;
     }
 
-    @media (max-width: 1024px) {
+    /* Expert-Level Mobile-First Responsive Design */
+
+    /* Ultra-wide screens (1600px+) */
+    @media (min-width: 1600px) {
+      .container {
+        max-width: 1400px;
+      }
+
       .project-card {
-        min-height: 420px;
+        min-height: 500px;
+      }
+
+      .hero-title {
+        font-size: 6rem !important;
       }
     }
 
-    @media (max-width: 768px) {
+    /* Large screens (1280px-1599px) */
+    @media (max-width: 1599px) and (min-width: 1280px) {
+      .project-card {
+        min-height: 450px;
+      }
+
+      .hero-title {
+        font-size: 5rem !important;
+      }
+    }
+
+    /* Desktop (1024px-1279px) */
+    @media (max-width: 1279px) and (min-width: 1024px) {
+      .project-card {
+        min-height: 420px;
+      }
+
+      .hero-title {
+        font-size: 4rem !important;
+      }
+
+      .hero-subtitle {
+        font-size: 1.75rem !important;
+      }
+    }
+
+    /* Tablet Landscape (768px-1023px) */
+    @media (max-width: 1023px) and (min-width: 768px) {
+      .project-card {
+        min-height: 400px;
+      }
+
+      .hero-title {
+        font-size: 3.5rem !important;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem !important;
+      }
+
+      .section-title {
+        font-size: 3rem !important;
+      }
+    }
+
+    /* Tablet Portrait (640px-767px) */
+    @media (max-width: 767px) and (min-width: 640px) {
       .project-card {
         min-height: 380px;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title {
+        font-size: 2.75rem !important;
+        line-height: 1.1;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem !important;
+        line-height: 1.3;
+      }
+
+      .section-title {
+        font-size: 2.5rem !important;
+      }
+
+      .container {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+      }
+    }
+
+    /* Large Mobile (480px-639px) */
+    @media (max-width: 639px) and (min-width: 480px) {
+      .project-card {
+        min-height: 360px;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title {
+        font-size: 2.25rem !important;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem !important;
+        line-height: 1.4;
+      }
+
+      .section-title {
+        font-size: 2rem !important;
+      }
+
+      .glass-card {
+        padding: 1.25rem !important;
+      }
+
+      .action-btn {
+        padding: 0.5rem 1.1rem;
+        font-size: 0.9rem;
+      }
+
+      .container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+    }
+
+    /* Small Mobile (320px-479px) */
+    @media (max-width: 479px) {
+      .project-card {
+        min-height: 340px;
+        margin-bottom: 1rem;
+      }
+
+      .hero-title {
+        font-size: 1.85rem !important;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem !important;
+        line-height: 1.4;
+      }
+
+      .section-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+
+      .glass-card {
+        padding: 1rem !important;
+      }
+
+      .action-btn {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.8rem;
+      }
+
+      .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+    }
+
+    /* Extra Small Mobile (below 320px) */
+    @media (max-width: 319px) {
+      .hero-title {
+        font-size: 1.6rem !important;
+      }
+
+      .hero-subtitle {
+        font-size: 0.85rem !important;
+      }
+
+      .section-title {
+        font-size: 1.5rem !important;
+      }
+
+      .project-card {
+        min-height: 320px;
+      }
+
+      .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
+    }
+
+    /* Responsive Typography */
+    .gradient-text {
+      background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Enhanced Mobile Navigation */
+    @media (max-width: 1024px) {
+      .mobile-menu-button {
+        z-index: 60;
+        position: relative;
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer !important;
+        pointer-events: auto !important;
+      }
+
+      .mobile-menu-button:hover {
+        background: rgba(14, 165, 233, 0.1);
+        border-radius: 8px;
+      }
+
+      #mobile-menu {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        background: rgba(10, 10, 10, 0.95);
+        display: flex !important;
+      }
+
+      #mobile-menu.hidden {
+        display: none !important;
+      }
+
+      .hamburger-icon span {
+        transform-origin: center;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .hamburger-icon.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger-icon.open span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      .hamburger-icon.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+
+      .mobile-nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-nav-link:hover {
+        background: rgba(14, 165, 233, 0.1);
+        transform: translateX(10px);
+      }
+
+      .mobile-nav-link:active {
+        transform: scale(0.98);
+      }
+    }
+
+    /* Desktop Navigation Enhancements */
+    .nav-link {
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      transition: all 0.3s ease;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-1px);
+    }
+
+    .nav-link:active {
+      transform: translateY(0);
+    }
+
+    /* Advanced Project Cards Mobile Optimization */
+    @media (max-width: 768px) {
+      .project-card {
+        border-radius: 1rem !important;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .project-card:hover {
+        transform: translateY(-3px) scale(1.005) !important;
+        box-shadow: 0 8px 40px rgba(14, 165, 233, 0.12) !important;
+      }
+
+      .project-card .p-7 {
+        padding: 1.25rem !important;
+      }
+
+      .project-card h3 {
+        font-size: 1.125rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      .project-card p {
+        font-size: 0.875rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .project-card .rounded-t-2xl {
+        height: 180px !important;
+      }
+    }
+
+    /* Ultra-responsive Project Grid */
+    @media (max-width: 640px) {
+      .project-card .rounded-t-2xl {
+        height: 160px !important;
+      }
+
+      .project-card h3 {
+        font-size: 1rem !important;
+      }
+
+      .project-card p {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+      }
+    }
+
+    /* Expert Skills Grid Responsiveness */
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+
+      .skills-grid .glass-card {
+        padding: 1.5rem !important;
+      }
+
+      .skills-grid h3 {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .skills-grid .glass-card {
+        padding: 1.25rem !important;
+      }
+
+      .skills-grid h3 {
+        font-size: 1.25rem !important;
+      }
+    }
+
+    /* Expert-Level Touch Interactions & Micro-animations */
+    @media (max-width: 768px) {
+      .filter-btn {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        min-height: 44px;
+        /* iOS touch target */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .filter-btn:active {
+        transform: scale(0.96);
+        transition: transform 0.1s ease;
+      }
+
+      .project-card:active {
+        transform: translateY(-2px) scale(0.99);
+        transition: transform 0.1s ease;
+      }
+
+      .action-btn:active {
+        transform: translateY(0) scale(0.96);
+        transition: transform 0.1s ease;
+      }
+
+      /* Better button spacing for fat fingers */
+      .action-btn {
+        min-height: 44px !important;
+        margin: 0.25rem !important;
+      }
+    }
+
+    /* Advanced Stats Grid Mobile Enhancement */
+    @media (max-width: 640px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+      }
+
+      .stats-grid .glass-card {
+        padding: 1rem !important;
+        text-align: center;
+      }
+
+      .stats-grid h4 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      .stats-grid p {
+        font-size: 0.75rem !important;
+      }
+    }
+
+    /* Premium About Section Mobile Optimization */
+    @media (max-width: 768px) {
+      .about-image-container {
+        max-width: 280px !important;
+        margin: 0 auto 2rem !important;
+      }
+
+      .about-content {
+        text-align: center !important;
+      }
+
+      .about-content h3 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .about-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+      }
+    }
+
+    /* Contact Section Mobile Polish */
+    @media (max-width: 768px) {
+      .contact-social-links {
+        justify-content: center !important;
+        gap: 1rem !important;
+      }
+
+      .contact-social-links a {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 1.25rem !important;
+      }
+    }
+
+    /* Footer Responsive Improvements */
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+      }
+
+      .footer-social-links {
+        justify-content: center !important;
       }
     }
   </style>
@@ -305,7 +753,8 @@
       </ul>
 
       <!-- Mobile menu button -->
-      <button id="menu-toggle" class="mobile-menu-button lg:hidden flex flex-col space-y-1.5 focus:outline-none z-50">
+      <button id="menu-toggle"
+        class="mobile-menu-button lg:hidden flex flex-col space-y-1.5 focus:outline-none z-50 p-2 cursor-pointer">
         <div class="hamburger-icon">
           <span
             class="w-6 h-0.5 bg-neutral-300 transition-transform duration-300 ease-in-out origin-center block"></span>
@@ -317,25 +766,25 @@
 
       <!-- Mobile menu -->
       <div id="mobile-menu"
-        class="fixed inset-0 bg-neutral-950/95 backdrop-blur-md flex-col items-center justify-center z-40 hidden">
+        class="fixed inset-0 bg-neutral-950/95 backdrop-blur-md flex flex-col items-center justify-center z-40 hidden">
         <ul class="flex flex-col items-center space-y-8">
           <li><a href="#home"
-              class="text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300">Home</a>
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Home</a>
           </li>
           <li><a href="#about"
-              class="text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300">About</a>
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">About</a>
           </li>
           <li><a href="#experience"
-              class="text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300">Experience</a>
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Experience</a>
           </li>
           <li><a href="#projects"
-              class="text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300">Projects</a>
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Projects</a>
           </li>
           <li><a href="#skills"
-              class="text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300">Skills</a>
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Skills</a>
           </li>
           <li><a href="#contact"
-              class="text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300">Contact</a>
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Contact</a>
           </li>
         </ul>
       </div>
@@ -347,13 +796,13 @@
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden -z-10">
       <div
-        class="absolute w-[300px] h-[300px] top-[20%] left-[10%] rounded-full bg-primary-500/10 animate-float-professional">
+        class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] top-[15%] sm:top-[20%] left-[5%] sm:left-[10%] rounded-full bg-primary-500/10 animate-float-professional">
       </div>
       <div
-        class="absolute w-[400px] h-[400px] -bottom-[100px] -right-[100px] rounded-full bg-accent-500/10 animate-float-professional">
+        class="absolute w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] -bottom-[25px] sm:-bottom-[50px] lg:-bottom-[100px] -right-[25px] sm:-right-[50px] lg:-right-[100px] rounded-full bg-accent-500/10 animate-float-professional">
       </div>
       <div
-        class="absolute w-[200px] h-[200px] top-[60%] left-[30%] rounded-full bg-primary-400/10 animate-float-professional">
+        class="absolute w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] top-[55%] sm:top-[60%] left-[20%] sm:left-[25%] md:left-[30%] rounded-full bg-primary-400/10 animate-float-professional">
       </div>
 
       <!-- Professional gradient overlay -->
@@ -361,25 +810,26 @@
     </div>
 
     <!-- Hero Content -->
-    <div class="text-center z-10 px-6 max-w-4xl">
+    <div class="text-center z-10 px-3 sm:px-4 md:px-6 max-w-4xl w-full">
       <h1
-        class="text-6xl md:text-7xl lg:text-8xl font-bold font-display mb-8 gradient-text hero-title filter drop-shadow-xl">
+        class="hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display mb-4 sm:mb-6 md:mb-8 gradient-text filter drop-shadow-xl leading-tight">
         Kunj Shah
       </h1>
-      <p class="text-2xl md:text-3xl text-neutral-300 mb-12 font-light hero-subtitle">
+      <p
+        class="hero-subtitle text-base sm:text-lg md:text-2xl lg:text-3xl text-neutral-300 mb-6 sm:mb-8 md:mb-12 font-light px-2 sm:px-4 leading-relaxed">
         Developer | Cybersecurity Learner | AI Enthusiast
       </p>
       <!-- Hero Section Buttons -->
-      <div class="flex flex-wrap justify-center gap-6 hero-buttons">
+      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 hero-buttons px-2 sm:px-4">
         <a href="#projects"
-          class="relative inline-flex items-center px-8 py-4 rounded-full text-white font-bold overflow-hidden group bg-gradient-primary transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:-translate-y-1">
-          <span class="relative z-10 uppercase tracking-wider text-sm md:text-base">View My Work</span>
+          class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-white font-bold overflow-hidden group bg-gradient-primary transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:-translate-y-1 w-full sm:w-auto min-h-[44px] text-sm md:text-base">
+          <span class="relative z-10 uppercase tracking-wider">View My Work</span>
           <span
             class="absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-25deg] group-hover:translate-x-[100%] transition-all duration-700"></span>
         </a>
         <a href="#contact"
-          class="relative inline-flex items-center px-8 py-4 rounded-full text-neutral-200 font-bold overflow-hidden group bg-transparent border-2 border-primary-500 transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:bg-primary-500 hover:text-white hover:-translate-y-1">
-          <span class="relative z-10 uppercase tracking-wider text-sm md:text-base">Contact Me</span>
+          class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-neutral-200 font-bold overflow-hidden group bg-transparent border-2 border-primary-500 transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:bg-primary-500 hover:text-white hover:-translate-y-1 w-full sm:w-auto min-h-[44px] text-sm md:text-base">
+          <span class="relative z-10 uppercase tracking-wider">Contact Me</span>
           <span
             class="absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-25deg] group-hover:translate-x-[100%] transition-all duration-700"></span>
         </a>
@@ -387,11 +837,11 @@
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
+    <div class="absolute bottom-4 sm:bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
       <a href="#about"
         class="flex flex-col items-center text-neutral-400 hover:text-primary-400 transition-colors duration-300">
-        <span class="text-sm font-light mb-2">Scroll Down</span>
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        <span class="text-xs sm:text-sm font-light mb-1 sm:mb-2">Scroll Down</span>
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
@@ -406,14 +856,14 @@
       <div class="absolute left-[5%] bottom-[10%] w-72 h-72 rounded-full bg-accent-500/20 blur-3xl"></div>
     </div>
 
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 sm:px-6">
       <h2
-        class="text-center text-5xl lg:text-6xl font-bold font-display mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-20px] after:h-1.5 after:w-24 after:rounded-full after:bg-gradient-primary">
+        class="section-title text-center text-3xl sm:text-5xl lg:text-6xl font-bold font-display mb-12 sm:mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-15px] sm:after:bottom-[-20px] after:h-1.5 after:w-16 sm:after:w-24 after:rounded-full after:bg-gradient-primary">
         About Me</h2>
 
-      <div class="flex flex-col lg:flex-row items-center gap-16">
+      <div class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-16">
         <!-- Profile image with animated border -->
-        <div class="relative w-full max-w-md group perspective-1000">
+        <div class="relative w-full max-w-[280px] sm:max-w-xs md:max-w-md group perspective-1000 about-image-container">
           <div
             class="relative z-10 rounded-2xl overflow-hidden border-4 border-primary-500/30 shadow-professional-lg shadow-primary-500/20 transition-all duration-500 group-hover:shadow-glow-primary transform group-hover:-translate-y-2">
             <img src="images/kunj.jpg" alt="Kunj Shah - Full Stack Developer"
@@ -425,47 +875,47 @@
           <div class="absolute -bottom-4 -right-4 w-full h-full border-4 border-primary-600/50 rounded-2xl -z-10"></div>
         </div>
         <!-- Content -->
-        <div class="flex-1 space-y-6">
-          <h3 class="text-3xl md:text-4xl font-bold font-display gradient-text">
+        <div class="flex-1 space-y-3 sm:space-y-4 md:space-y-6 text-center lg:text-left about-content">
+          <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-display gradient-text">
             Hello, I'm <span class="font-extrabold">Kunj Shah</span></h3>
 
-          <p class="text-lg text-neutral-300 leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg text-neutral-300 leading-relaxed">
             A passionate developer with expertise in various programming languages and technologies. I specialize in web
             development, cybersecurity, and artificial intelligence.
           </p>
 
-          <p class="text-lg text-neutral-300 leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg text-neutral-300 leading-relaxed">
             With a strong foundation in languages like Python, JavaScript, Go, C/C++, and Java, I enjoy solving complex
             problems and building innovative solutions.
           </p>
 
           <!-- Stats -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-10">
-            <div class="text-center p-4 rounded-xl glass-card">
-              <h4 class="text-4xl font-bold text-primary-400 mb-2">1+</h4>
-              <p class="text-neutral-400">Years Experience</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 my-6 sm:my-8 md:my-10 stats-grid">
+            <div class="text-center p-2 sm:p-3 md:p-4 rounded-xl glass-card">
+              <h4 class="text-xl sm:text-2xl md:text-4xl font-bold text-primary-400 mb-1 sm:mb-2">1+</h4>
+              <p class="text-xs sm:text-sm text-neutral-400">Years Experience</p>
             </div>
-            <div class="text-center p-4 rounded-xl glass-card">
-              <h4 class="text-4xl font-bold text-primary-400 mb-2">10+</h4>
-              <p class="text-neutral-400">Projects</p>
+            <div class="text-center p-2 sm:p-3 md:p-4 rounded-xl glass-card">
+              <h4 class="text-xl sm:text-2xl md:text-4xl font-bold text-primary-400 mb-1 sm:mb-2">10+</h4>
+              <p class="text-xs sm:text-sm text-neutral-400">Projects</p>
             </div>
-            <div class="text-center p-4 rounded-xl glass-card">
-              <h4 class="text-4xl font-bold text-primary-400 mb-2">5+</h4>
-              <p class="text-neutral-400">Tech Stack</p>
+            <div class="text-center p-2 sm:p-3 md:p-4 rounded-xl glass-card">
+              <h4 class="text-xl sm:text-2xl md:text-4xl font-bold text-primary-400 mb-1 sm:mb-2">5+</h4>
+              <p class="text-xs sm:text-sm text-neutral-400">Tech Stack</p>
             </div>
-            <div class="text-center p-4 rounded-xl glass-card">
-              <h4 class="text-4xl font-bold text-primary-400 mb-2">0</h4>
-              <p class="text-neutral-400">Awards</p>
+            <div class="text-center p-2 sm:p-3 md:p-4 rounded-xl glass-card">
+              <h4 class="text-xl sm:text-2xl md:text-4xl font-bold text-primary-400 mb-1 sm:mb-2">0</h4>
+              <p class="text-xs sm:text-sm text-neutral-400">Awards</p>
             </div>
           </div>
 
           <!-- CTA -->
-          <div class="flex flex-wrap gap-4 mt-8">
+          <div class="flex flex-wrap gap-3 sm:gap-4 mt-4 sm:mt-6 md:mt-8 justify-center lg:justify-start">
             <a href="resume/kunj_resume.pdf" download
-              class="relative inline-flex items-center px-8 py-4 rounded-full text-white font-bold overflow-hidden group bg-gradient-primary transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:-translate-y-1">
-              <span class="relative z-10 uppercase tracking-wider text-sm md:text-base flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
+              class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-white font-bold overflow-hidden group bg-gradient-primary transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:-translate-y-1 min-h-[44px] text-sm md:text-base">
+              <span class="relative z-10 uppercase tracking-wider flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 mr-2" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -635,32 +1085,33 @@
       <div class="absolute left-[10%] bottom-[10%] w-72 h-72 rounded-full bg-accent-500/20 blur-3xl"></div>
     </div>
 
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 sm:px-6">
       <h2
-        class="text-center text-5xl lg:text-6xl font-bold font-display mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-20px] after:h-1.5 after:w-24 after:rounded-full after:bg-gradient-primary">
+        class="section-title text-center text-3xl sm:text-5xl lg:text-6xl font-bold font-display mb-12 sm:mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-15px] sm:after:bottom-[-20px] after:h-1.5 after:w-16 sm:after:w-24 after:rounded-full after:bg-gradient-primary">
         My Projects</h2>
 
       <!-- Project filters -->
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-12 px-2 sm:px-4">
         <button
-          class="filter-btn px-6 py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 active:bg-primary-500/20 active:text-primary-200 active:border-primary-500/50"
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 active:bg-primary-500/20 active:text-primary-200 active:border-primary-500/50 text-xs sm:text-sm md:text-base whitespace-nowrap"
           data-filter="all">All</button>
         <button
-          class="filter-btn px-6 py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300"
-          data-filter="web">Web Development</button>
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          data-filter="web">Web Dev</button>
         <button
-          class="filter-btn px-6 py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300"
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 text-xs sm:text-sm md:text-base whitespace-nowrap"
           data-filter="ai">AI/ML</button>
         <button
-          class="filter-btn px-6 py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300"
-          data-filter="security">Cybersecurity</button>
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          data-filter="security" id="cybersecurity-btn">Security</button>
       </div>
 
       <!-- Projects grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-8 sm:mt-12">
         <!-- PAYMAN AI -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden">
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
+          data-category="web">
           <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
@@ -841,9 +1292,10 @@
           </div>
         </div>
 
-        <!-- GitHub Multi-AI Agent Readme Generator -->
+        <!-- GitHub Multi-AI Agent Readme Generator (moved to AI/ML category) -->
         <div
-          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-indigo-700/30 hover:shadow-2xl hover:border-indigo-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up">
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-indigo-700/30 hover:shadow-2xl hover:border-indigo-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up"
+          data-category="ai">
           <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
               alt="GitHub Multi-AI Agent Readme Generator"
@@ -868,10 +1320,10 @@
               documentation with intelligent content suggestions and formatting.</p>
             <div class="flex justify-between items-center mt-auto gap-2">
               <a href="https://github.com/KunjShah01/github-multi-ai-agent-readme-generator" target="_blank"
-                class="action-btn-indigo">
+                class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://youtu.be/HaZXPO0VTlE" target="_blank" class="action-btn-indigo">
+              <a href="https://youtu.be/HaZXPO0VTlE" target="_blank" class="action-btn">
                 <i class="fas fa-video mr-1"></i> Demo
               </a>
             </div>
@@ -881,7 +1333,7 @@
         <!-- RL-A2A (last, not repeated) -->
         <div class="project-card group" data-category="ai">
           <div class="relative overflow-hidden rounded-xl h-52 mb-4">
-            <img src="images\A2A.png" alt="RL-A2A"
+            <img src="images/A2A.png" alt="RL-A2A"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent opacity-70"></div>
             <div class="absolute bottom-4 left-4 right-4">
@@ -915,6 +1367,97 @@
             </div>
           </div>
         </div>
+
+        <!-- GO Ransomware Simulation -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-red-700/30 hover:shadow-2xl hover:border-red-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up"
+          data-category="security">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+              alt="GO Ransomware Simulation - Cybersecurity Education"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
+            <div class="absolute inset-0 bg-gradient-to-t from-red-900/80 to-transparent"></div>
+            <!-- Security Icon Overlay -->
+            <div
+              class="absolute top-4 right-4 w-12 h-12 bg-red-500/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+              <i class="fas fa-shield-virus text-red-300 text-lg"></i>
+            </div>
+          </div>
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">GO Ransomware Simulation</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 rounded-full bg-red-500/20 text-xs text-red-200 font-semibold tracking-wide">Go</span>
+              <span
+                class="px-3 py-1 rounded-full bg-red-500/20 text-xs text-red-200 font-semibold tracking-wide">Security</span>
+              <span
+                class="px-3 py-1 rounded-full bg-red-500/20 text-xs text-red-200 font-semibold tracking-wide">Ransomware</span>
+              <span
+                class="px-3 py-1 rounded-full bg-red-500/20 text-xs text-red-200 font-semibold tracking-wide">Educational</span>
+            </div>
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">A Go-based ransomware simulation tool for educational
+              and research purposes. Demonstrates ransomware behavior in a safe, controlled environment for
+              cybersecurity awareness and defense training.</p>
+            <div class="flex justify-between items-center mt-auto gap-2">
+              <a href="https://github.com/KunjShah95/GO-RANSOMWARE-SIMUALTION" target="_blank" class="action-btn">
+                <i class="fab fa-github mr-2"></i> Code
+              </a>
+              <span class="text-xs text-red-400 flex items-center">
+                <i class="fas fa-graduation-cap mr-1"></i> Educational Use
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Application Vulnerability Scanner Tool -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-yellow-700/30 hover:shadow-2xl hover:border-yellow-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up"
+          data-category="security">
+          <div class="relative overflow-hidden rounded-t-2xl h-56">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"
+              alt="Web Application Vulnerability Scanner - Security Testing"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
+            <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/80 to-transparent"></div>
+            <!-- Security Scanner Icon Overlay -->
+            <div
+              class="absolute top-4 right-4 w-12 h-12 bg-yellow-500/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+              <i class="fas fa-search text-yellow-300 text-lg"></i>
+            </div>
+            <!-- Vulnerability Detection Badge -->
+            <div class="absolute top-4 left-4 px-3 py-1 bg-yellow-500/20 backdrop-blur-sm rounded-full">
+              <span class="text-yellow-200 text-xs font-semibold flex items-center">
+                <i class="fas fa-bug mr-1"></i> Vuln Scanner
+              </span>
+            </div>
+          </div>
+          <div class="p-7 flex flex-col h-80">
+            <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">Web Application Vulnerability Scanner
+              Tool</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 rounded-full bg-yellow-500/20 text-xs text-yellow-200 font-semibold tracking-wide">Python</span>
+              <span
+                class="px-3 py-1 rounded-full bg-yellow-500/20 text-xs text-yellow-200 font-semibold tracking-wide">Security</span>
+              <span
+                class="px-3 py-1 rounded-full bg-yellow-500/20 text-xs text-yellow-200 font-semibold tracking-wide">Vulnerability
+                Scanner</span>
+              <span
+                class="px-3 py-1 rounded-full bg-yellow-500/20 text-xs text-yellow-200 font-semibold tracking-wide">Automation</span>
+            </div>
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">A Python-based tool for scanning web applications for
+              common vulnerabilities. Automates security testing and provides detailed reports to help developers secure
+              their applications.</p>
+            <div class="flex justify-between items-center mt-auto gap-2">
+              <a href="https://github.com/KunjShah95/web-application-vulnerability-scanner-tool" target="_blank"
+                class="action-btn">
+                <i class="fab fa-github mr-2"></i> Code
+              </a>
+              <span class="text-xs text-yellow-400 flex items-center">
+                <i class="fas fa-shield-alt mr-1"></i> Security Tool
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -926,12 +1469,12 @@
       <div class="absolute right-[10%] bottom-[10%] w-72 h-72 rounded-full bg-primary-500/20 blur-3xl"></div>
     </div>
 
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 sm:px-6">
       <h2
-        class="text-center text-5xl lg:text-6xl font-bold font-display mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-20px] after:h-1.5 after:w-24 after:rounded-full after:bg-gradient-primary">
+        class="section-title text-center text-3xl sm:text-5xl lg:text-6xl font-bold font-display mb-12 sm:mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-15px] sm:after:bottom-[-20px] after:h-1.5 after:w-16 sm:after:w-24 after:rounded-full after:bg-gradient-primary">
         My Skills</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+      <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-12 sm:mt-16">
         <!-- Skill Card 1: Frontend -->
         <div class="rounded-2xl glass-card p-8 flex flex-col items-center group hover:border-primary-500/30">
           <div class="text-primary-400 text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -1000,33 +1543,34 @@
       </div>
 
       <!-- Additional technical skills -->
-      <div class="mt-20">
-        <h3 class="text-2xl lg:text-3xl font-bold font-display text-center mb-10 text-neutral-200">Additional
+      <div class="mt-16 sm:mt-20">
+        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-center mb-8 sm:mb-10 text-neutral-200">
+          Additional
           Technologies</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
           <div
-            class="rounded-xl py-6 px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
             <i
-              class="fab fa-docker text-4xl text-accent-400 mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300">Docker</span>
+              class="fab fa-docker text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Docker</span>
           </div>
           <div
-            class="rounded-xl py-6 px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
             <i
-              class="fab fa-linux text-4xl text-accent-400 mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300">Linux</span>
+              class="fab fa-linux text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Linux</span>
           </div>
           <div
-            class="rounded-xl py-6 px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
             <i
-              class="fab fa-git-alt text-4xl text-accent-400 mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300">Git</span>
+              class="fab fa-git-alt text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Git</span>
           </div>
           <div
-            class="rounded-xl py-6 px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
             <i
-              class="fas fa-shield-alt text-4xl text-accent-400 mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300">Security</span>
+              class="fas fa-shield-alt text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Security</span>
           </div>
         </div>
       </div>
@@ -1044,33 +1588,34 @@
         class="text-center text-5xl lg:text-6xl font-bold font-display mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-20px] after:h-1.5 after:w-24 after:rounded-full after:bg-gradient-primary">
         Contact
       </h2>
-      <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+      <div class="flex flex-col md:flex-row gap-8 sm:gap-12 justify-center items-center">
         <!-- Social Media -->
         <div
-          class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-primary hover:border-primary-500/30 border-primary-600/20">
-          <h3 class="text-2xl font-bold mb-6 text-neutral-100 text-center">Connect On Social Media</h3>
-          <div class="flex justify-center gap-6 flex-wrap">
+          class="glass-card rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-primary hover:border-primary-500/30 border-primary-600/20 w-full max-w-md">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-neutral-100 text-center">Connect On Social Media
+          </h3>
+          <div class="flex justify-center gap-4 sm:gap-6 flex-wrap contact-social-links">
             <a href="https://github.com/KunjShah95" target="_blank"
-              class="w-12 h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
-              <i class="fab fa-github text-lg"></i>
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fab fa-github text-base sm:text-lg"></i>
             </a>
             <a href="https://linkedin.com/in/kunjshah05" target="_blank"
-              class="w-12 h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
-              <i class="fab fa-linkedin-in text-lg"></i>
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fab fa-linkedin-in text-base sm:text-lg"></i>
             </a>
             <a href="https://twitter.com/INDIA_KUNJ" target="_blank"
-              class="w-12 h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
-              <i class="fab fa-twitter text-lg"></i>
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fab fa-twitter text-base sm:text-lg"></i>
             </a>
             <a href="mailto:kunjkshah05@gmail.com"
-              class="w-12 h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
-              <i class="fas fa-envelope text-lg"></i>
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fas fa-envelope text-base sm:text-lg"></i>
             </a>
             <a href="https://huggingface.co/kunjshah01" target="_blank"
-              class="w-12 h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110"
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110"
               title="Hugging Face">
               <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"
-                class="w-6 h-6" style="filter: brightness(0) invert(1);" />
+                class="w-5 h-5 sm:w-6 sm:h-6" style="filter: brightness(0) invert(1);" />
             </a>
           </div>
         </div>
@@ -1081,75 +1626,82 @@
   <footer class="relative bg-neutral-950/90 backdrop-blur-lg py-12 border-t border-primary-600/20">
     <div class="container mx-auto px-6">
       <!-- Top Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div>
-          <h4 class="text-xl font-bold font-display gradient-text mb-6">Kunj Shah</h4>
-          <p class="text-neutral-400 mb-6">Developer, Cybersecurity Learner and AI Enthusiast crafting innovative
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-12 footer-grid">
+        <div class="text-center md:text-left">
+          <h4 class="text-lg sm:text-xl font-bold font-display gradient-text mb-4 sm:mb-6">Kunj Shah</h4>
+          <p class="text-neutral-400 mb-4 sm:mb-6 text-sm sm:text-base">Developer, Cybersecurity Learner and AI
+            Enthusiast crafting innovative
             digital
             solutions.</p>
-          <div class="flex flex-row flex-wrap items-center gap-3">
+          <div
+            class="flex flex-row flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-3 footer-social-links">
             <a href="https://github.com/KunjShah95" target="_blank"
-              class="w-10 h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
-              <i class="fab fa-github text-lg"></i>
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
+              <i class="fab fa-github text-sm sm:text-lg"></i>
             </a>
             <a href="https://linkedin.com/in/kunjshah05" target="_blank"
-              class="w-10 h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
-              <i class="fab fa-linkedin-in text-lg"></i>
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
+              <i class="fab fa-linkedin-in text-sm sm:text-lg"></i>
             </a>
             <a href="https://twitter.com/INDIA_KUNJ" target="_blank"
-              class="w-10 h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
-              <i class="fab fa-twitter text-lg"></i>
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
+              <i class="fab fa-twitter text-sm sm:text-lg"></i>
             </a>
             <a href="mailto:kunjkshah05@gmail.com"
-              class="w-10 h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
-              <i class="fas fa-envelope text-lg"></i>
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
+              <i class="fas fa-envelope text-sm sm:text-lg"></i>
             </a>
             <a href="https://huggingface.co/kunjshah01" target="_blank"
-              class="w-10 h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary"
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary"
               title="Hugging Face">
               <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"
-                class="w-6 h-6" style="filter: brightness(0) invert(1);" />
+                class="w-4 h-4 sm:w-6 sm:h-6" style="filter: brightness(0) invert(1);" />
             </a>
           </div>
         </div>
-        <div>
-          <h4 class="text-xl font-bold text-neutral-200 mb-6">Quick Links</h4>
-          <ul class="space-y-3">
-            <li><a href="#home" class="text-neutral-400 hover:text-primary-400 transition-colors">Home</a></li>
-            <li><a href="#about" class="text-neutral-400 hover:text-primary-400 transition-colors">About</a></li>
-            <li><a href="#projects" class="text-neutral-400 hover:text-primary-400 transition-colors">Projects</a>
+        <div class="text-center md:text-left">
+          <h4 class="text-lg sm:text-xl font-bold text-neutral-200 mb-4 sm:mb-6">Quick Links</h4>
+          <ul class="space-y-2 sm:space-y-3">
+            <li><a href="#home"
+                class="text-neutral-400 hover:text-primary-400 transition-colors text-sm sm:text-base">Home</a></li>
+            <li><a href="#about"
+                class="text-neutral-400 hover:text-primary-400 transition-colors text-sm sm:text-base">About</a></li>
+            <li><a href="#projects"
+                class="text-neutral-400 hover:text-primary-400 transition-colors text-sm sm:text-base">Projects</a>
             </li>
-            <li><a href="#skills" class="text-neutral-400 hover:text-primary-400 transition-colors">Skills</a></li>
-            <li><a href="#contact" class="text-neutral-400 hover:text-primary-400 transition-colors">Contact</a>
+            <li><a href="#skills"
+                class="text-neutral-400 hover:text-primary-400 transition-colors text-sm sm:text-base">Skills</a></li>
+            <li><a href="#contact"
+                class="text-neutral-400 hover:text-primary-400 transition-colors text-sm sm:text-base">Contact</a>
             </li>
           </ul>
         </div>
-        <div>
-          <h4 class="text-xl font-bold text-neutral-200 mb-6">Tech Stack</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">Python</span>
-            <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">JavaScript</span>
-            <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">Go</span>
-            <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">C/C++</span>
-            <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">Java</span>
-            <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Node.js</span>
-            <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">React</span>
-            <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Docker</span>
-            <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Linux</span>
-            <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Git</span>
+        <div class="text-center md:text-left">
+          <h4 class="text-lg sm:text-xl font-bold text-neutral-200 mb-4 sm:mb-6">Tech Stack</h4>
+          <div class="flex flex-wrap justify-center md:justify-start gap-1 sm:gap-2">
+            <span class="px-2 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">Python</span>
+            <span class="px-2 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">JavaScript</span>
+            <span class="px-2 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">Go</span>
+            <span class="px-2 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">C/C++</span>
+            <span class="px-2 py-1 rounded-full bg-primary-500/20 text-primary-300 text-xs">Java</span>
+            <span class="px-2 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Node.js</span>
+            <span class="px-2 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">React</span>
+            <span class="px-2 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Docker</span>
+            <span class="px-2 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Linux</span>
+            <span class="px-2 py-1 rounded-full bg-accent-500/20 text-accent-300 text-xs">Git</span>
           </div>
         </div>
-        <div>
-          <h4 class="text-xl font-bold text-neutral-200 mb-6">Contact</h4>
-          <div class="space-y-3">
-            <div class="flex items-center gap-3">
-              <i class="fas fa-envelope text-primary-400"></i>
+        <div class="text-center md:text-left">
+          <h4 class="text-lg sm:text-xl font-bold text-neutral-200 mb-4 sm:mb-6">Contact</h4>
+          <div class="space-y-2 sm:space-y-3">
+            <div class="flex items-center justify-center md:justify-start gap-2 sm:gap-3">
+              <i class="fas fa-envelope text-primary-400 text-sm"></i>
               <a href="mailto:kunjkshah05@gmail.com"
-                class="hover:text-primary-400 transition-colors text-neutral-400">kunjkshah05@gmail.com</a>
+                class="hover:text-primary-400 transition-colors text-neutral-400 text-sm sm:text-base break-all">kunjkshah05@gmail.com</a>
             </div>
-            <div class="flex items-center gap-3">
-              <i class="fas fa-map-marker-alt text-primary-400"></i>
-              <span class="text-neutral-400">Ahmedabad, Gujarat, India</span>
+            <div class="flex items-center justify-center md:justify-start gap-2 sm:gap-3">
+              <i class="fas fa-map-marker-alt text-primary-400 text-sm"></i>
+              <span class="text-neutral-400 text-sm sm:text-base">Ahmedabad, Gujarat, India</span>
             </div>
           </div>
         </div>
@@ -1157,43 +1709,332 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <!-- Botpress Chatbot Widget with Minimize/Show Button (Permanent Fix) -->
+  <script>
+    // Enhanced mobile responsiveness and navigation fix
+    document.addEventListener('DOMContentLoaded', function () {
+      // Fix all navigation functionality
+      const navbar = document.getElementById('navbar');
+      const mobileMenuButton = document.querySelector('.mobile-menu-button');
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.querySelector('.hamburger-icon');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      console.log('Navigation elements found:', {
+        mobileMenuButton: !!mobileMenuButton,
+        menuToggle: !!menuToggle,
+        mobileMenu: !!mobileMenu,
+        hamburgerIcon: !!hamburgerIcon
+      });
+
+      // Enhanced mobile menu toggle
+      const toggleMobileMenu = () => {
+        if (mobileMenu) {
+          const isHidden = mobileMenu.classList.contains('hidden');
+
+          if (isHidden) {
+            // Show menu
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            if (hamburgerIcon) hamburgerIcon.classList.add('open');
+          } else {
+            // Hide menu
+            mobileMenu.classList.add('hidden');
+            mobileMenu.style.display = 'none';
+            document.body.style.overflow = '';
+            if (hamburgerIcon) hamburgerIcon.classList.remove('open');
+          }
+        }
+      };
+
+      // Add click listeners to mobile menu button
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileMenu);
+      }
+
+      // Enhanced smooth scrolling for all navigation links
+      const handleNavClick = (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+          // Close mobile menu if open
+          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            toggleMobileMenu();
+          }
+
+          // Smooth scroll to target
+          const offsetTop = targetSection.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      };
+
+      // Apply click handlers to all navigation links
+      [...navLinks, ...mobileNavLinks].forEach(link => {
+        link.addEventListener('click', handleNavClick);
+        link.style.cursor = 'pointer';
+        link.style.pointerEvents = 'auto';
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          if (!mobileMenu.contains(e.target) && !mobileMenuButton?.contains(e.target) && !menuToggle?.contains(e.target)) {
+            toggleMobileMenu();
+          }
+        }
+      });
+
+      // Enhanced scroll effects for navbar
+      let lastScrollTop = 0;
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Change navbar background on scroll
+        if (navbar) {
+          if (scrollTop > 100) {
+            navbar.classList.add('bg-neutral-950/95');
+            navbar.classList.remove('bg-neutral-950/90');
+          } else {
+            navbar.classList.add('bg-neutral-950/90');
+            navbar.classList.remove('bg-neutral-950/95');
+          }
+        }
+
+        // Active section highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = scrollTop + 100;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            // Remove active class from all links
+            [...navLinks, ...mobileNavLinks].forEach(link => {
+              link.classList.remove('text-primary-400');
+            });
+
+            // Add active class to current section links
+            const activeLinks = document.querySelectorAll(`a[href="#${sectionId}"]`);
+            activeLinks.forEach(link => {
+              link.classList.add('text-primary-400');
+            });
+          }
+        });
+
+        lastScrollTop = scrollTop;
+      });
+
+      // Enhanced mobile interactions
+      const addTouchFeedback = (element) => {
+        element.addEventListener('touchstart', function () {
+          this.style.transform = 'scale(0.98)';
+        }, { passive: true });
+
+        element.addEventListener('touchend', function () {
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 150);
+        }, { passive: true });
+      };
+
+      // Apply touch feedback to interactive elements
+      document.querySelectorAll('.filter-btn, .action-btn, .project-card, .nav-link, .mobile-nav-link').forEach(addTouchFeedback);
+
+      // Improve viewport handling for mobile
+      const viewport = document.querySelector('meta[name=viewport]');
+      if (viewport) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+      }
+
+      // Optimize images for mobile
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        img.setAttribute('loading', 'lazy');
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+      });
+
+      // Add mobile-specific classes based on screen size
+      const updateMobileClasses = () => {
+        const isMobile = window.innerWidth <= 768;
+        document.body.classList.toggle('mobile-view', isMobile);
+      };
+
+      updateMobileClasses();
+      window.addEventListener('resize', updateMobileClasses);
+    });
+  </script>
+  <!-- Botpress Chatbot Widget with Minimize/Show Button (Mobile Optimized) -->
   <div id="botpress-chatbot-container"
-    style="position:fixed;bottom:24px;right:24px;z-index:99999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+    style="position:fixed;bottom:16px;right:16px;z-index:99999;display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
     <iframe id="botpress-chatbot-iframe"
       src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/20/05/20250620053508-6M5B6R86.json&config=%7B%22disablePersistHistory%22%3Atrue%7D"
-      style="visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.3s,visibility 0.3s;width:400px;max-width:90vw;height:600px;border:none;border-radius:1.5rem;box-shadow:0 8px 40px #0ea5e980;background:#fff;"
+      style="visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.3s,visibility 0.3s;width:min(380px,calc(100vw - 32px));height:min(580px,calc(100vh - 100px));border:none;border-radius:1.25rem;box-shadow:0 8px 40px #0ea5e980;background:#fff;"
       allow="clipboard-write; microphone; camera" title="Botpress AI Chatbot Widget">
     </iframe>
     <button id="botpress-toggle-btn" aria-label="Open chat"
-      style="background:#0ea5e9;color:#fff;border-radius:50%;width:56px;height:56px;font-size:2rem;box-shadow:0 4px 24px #0ea5e980;border:none;cursor:pointer;z-index:100001;display:flex;align-items:center;justify-content:center;">
+      style="background:#0ea5e9;color:#fff;border-radius:50%;width:52px;height:52px;font-size:1.75rem;box-shadow:0 4px 24px #0ea5e980;border:none;cursor:pointer;z-index:100001;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;">
       💬
     </button>
   </div>
+
+  <style>
+    /* Mobile-specific chatbot adjustments */
+    @media (max-width: 640px) {
+      #botpress-chatbot-container {
+        bottom: 12px !important;
+        right: 12px !important;
+      }
+
+      #botpress-toggle-btn {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 1.5rem !important;
+      }
+
+      #botpress-chatbot-iframe {
+        width: calc(100vw - 24px) !important;
+        height: calc(100vh - 80px) !important;
+        border-radius: 1rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #botpress-chatbot-container {
+        bottom: 8px !important;
+        right: 8px !important;
+      }
+
+      #botpress-toggle-btn {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.25rem !important;
+      }
+    }
+
+    /* Performance & Accessibility Improvements */
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      .glass-card {
+        border-width: 2px;
+        background: rgba(0, 0, 0, 0.9);
+      }
+
+      .project-card {
+        border-width: 2px;
+      }
+    }
+
+    /* Focus indicators for accessibility */
+    button:focus-visible,
+    a:focus-visible,
+    .filter-btn:focus-visible,
+    .action-btn:focus-visible {
+      outline: 2px solid #0ea5e9;
+      outline-offset: 2px;
+    }
+
+    /* Smooth scrolling behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Image loading optimization */
+    img {
+      image-rendering: optimizeQuality;
+    }
+
+    /* Typography optimization for better readability */
+    body {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
   <script>
+    // Enhanced mobile-optimized chatbot functionality
     const botpressBtn = document.getElementById('botpress-toggle-btn');
     const botpressIframe = document.getElementById('botpress-chatbot-iframe');
     let botpressOpen = false;
+
     botpressBtn.onclick = function () {
       botpressOpen = !botpressOpen;
+
       if (botpressOpen) {
         botpressIframe.style.visibility = 'visible';
         botpressIframe.style.opacity = '1';
         botpressIframe.style.pointerEvents = 'auto';
         botpressBtn.innerText = '✖';
         botpressBtn.setAttribute('aria-label', 'Close chat');
+        botpressBtn.style.transform = 'scale(1.1)';
+
+        // Prevent background scroll on mobile when chat is open
+        if (window.innerWidth <= 768) {
+          document.body.style.overflow = 'hidden';
+        }
       } else {
         botpressIframe.style.visibility = 'hidden';
         botpressIframe.style.opacity = '0';
         botpressIframe.style.pointerEvents = 'none';
         botpressBtn.innerText = '💬';
         botpressBtn.setAttribute('aria-label', 'Open chat');
+        botpressBtn.style.transform = 'scale(1)';
+
+        // Restore scroll on mobile
+        document.body.style.overflow = '';
       }
     };
-    // Optionally, open on first click only (not auto-open)
-    // botpressIframe.style.visibility = 'hidden';
-    // botpressIframe.style.opacity = '0';
-    // botpressIframe.style.pointerEvents = 'none';
+
+    // Close chatbot when clicking outside on mobile
+    document.addEventListener('click', function (e) {
+      if (botpressOpen && window.innerWidth <= 768) {
+        const container = document.getElementById('botpress-chatbot-container');
+        if (!container.contains(e.target)) {
+          botpressBtn.click();
+        }
+      }
+    });
+
+    // Handle orientation changes on mobile
+    window.addEventListener('orientationchange', function () {
+      if (botpressOpen && window.innerWidth <= 768) {
+        setTimeout(() => {
+          // Adjust iframe size after orientation change
+          const iframe = document.getElementById('botpress-chatbot-iframe');
+          iframe.style.height = 'calc(100vh - 80px)';
+        }, 500);
+      }
+    });
+
+    // Add haptic feedback on supported devices
+    if ('vibrate' in navigator) {
+      botpressBtn.addEventListener('click', () => {
+        navigator.vibrate(50);
+      });
+    }
   </script>
 </body>
 
