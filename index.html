@@ -716,6 +716,14 @@
         justify-content: center !important;
       }
     }
+
+    /* Ensure project filter bar/buttons are always clickable on mobile */
+    .project-filters,
+    .filter-btn {
+      z-index: 1001 !important;
+      pointer-events: auto !important;
+      position: relative;
+    }
   </style>
 </head>
 
@@ -1327,7 +1335,7 @@
                 class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://youtu.be/HaZXPO0VTlE" target="_blank" class="action-btn">
+              <a href="https://youtu.be/HaZXPO0VTlE" target="_blank class=" action-btn">
                 <i class="fas fa-video mr-1"></i> Demo
               </a>
             </div>

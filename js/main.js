@@ -420,42 +420,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize image lazy loading
   document.addEventListener('DOMContentLoaded', preloadImages);
 
-  // Project filtering
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove active state from all buttons
-      filterButtons.forEach(btn => btn.classList.remove('active', 'bg-gradient-to-r', 'from-accent', 'to-pink-600', 'text-white'));
-
-      // Add active state to clicked button
-      button.classList.add('active', 'bg-gradient-to-r', 'from-accent', 'to-pink-600', 'text-white');
-
-      const filterValue = button.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        // Start with fade out effect
-        card.classList.add('opacity-0', 'scale-95');
-        card.style.transform = 'scale(0.95)';
-        card.style.transition = 'all 0.4s ease-out';
-
-        setTimeout(() => {
-          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.style.display = 'block';
-            // Then fade in
-            setTimeout(() => {
-              card.classList.remove('opacity-0', 'scale-95');
-              card.style.transform = 'scale(1)';
-            }, 10);
-          } else {
-            card.style.display = 'none';
-          }
-        }, 300);
-      });
-    });
-  });
-
   // Animate experience timeline and other elements on scroll
   const animateOnScroll = () => {
     const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-card');
