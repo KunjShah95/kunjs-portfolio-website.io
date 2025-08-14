@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet">
 
   <!-- Tailwind CSS with plugins -->
@@ -99,7 +99,7 @@
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
             mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'monospace'],
           },
           backgroundImage: {
@@ -801,7 +801,7 @@
     <!-- Hero Content -->
     <div class="text-center z-10 px-3 sm:px-4 md:px-6 max-w-4xl w-full">
       <h1
-        class="hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display mb-4 sm:mb-6 md:mb-8 gradient-text filter drop-shadow-xl leading-tight">
+        class="hero-title text-reveal text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display mb-4 sm:mb-6 md:mb-8 gradient-text filter drop-shadow-xl leading-tight">
         Kunj Shah
       </h1>
       <p
@@ -1475,18 +1475,67 @@
           </div>
           <h3 class="text-3xl font-bold font-display gradient-text mb-4">Frontend</h3>
           <div class="flex flex-wrap justify-center gap-4 mt-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-              title="HTML5" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3"
-              class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="JavaScript" title="JavaScript" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-              title="React" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
-              title="Vue.js" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS"
-              title="Tailwind CSS" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
+            <div class="relative group skill-item" data-proficiency="95%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                title="HTML5" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-4 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="90%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3"
+                class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="85%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript" title="JavaScript"
+                class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="80%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                title="React" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="70%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
+                title="Vue.js" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="90%">
+              <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS"
+                title="Tailwind CSS" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1497,18 +1546,66 @@
           </div>
           <h3 class="text-3xl font-bold font-display gradient-text mb-4">Backend</h3>
           <div class="flex flex-wrap justify-center gap-4 mt-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-              title="Node.js" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-              title="Python" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" title="Go"
-              class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java"
-              class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-              title="MySQL" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
-              title="MongoDB" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
+            <div class="relative group skill-item" data-proficiency="85%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                title="Node.js" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="95%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                title="Python" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="75%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" title="Go"
+                class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="80%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java"
+                class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="80%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                title="MySQL" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="70%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+                title="MongoDB" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1519,18 +1616,67 @@
           </div>
           <h3 class="text-3xl font-bold font-display gradient-text mb-4">AI & ML</h3>
           <div class="flex flex-wrap justify-center gap-4 mt-2">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-              alt="TensorFlow" title="TensorFlow" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"
-              title="PyTorch" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"
-              title="NumPy" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"
-              title="Pandas" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV"
-              title="OpenCV" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"
-              title="Jupyter" class="w-10 h-10 hover:scale-110 transition-transform duration-300">
+            <div class="relative group skill-item" data-proficiency="80%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                alt="TensorFlow" title="TensorFlow"
+                class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="75%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"
+                title="PyTorch" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="90%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"
+                title="NumPy" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="85%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"
+                title="Pandas" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="80%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV"
+                title="OpenCV" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="relative group skill-item" data-proficiency="85%">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"
+                title="Jupyter" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute bottom-full mb-2 w-full flex-col items-center hidden group-hover:flex transition-all duration-300">
+                <div class="w-full bg-neutral-700 rounded-full h-1.5">
+                  <div class="bg-primary-500 h-1.5 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
