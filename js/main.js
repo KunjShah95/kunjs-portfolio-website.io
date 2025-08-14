@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initParallaxEffects();
   initContactForm();
   initThemeToggle();
+  initTextRevealAnimation();
   initAOS();
 
   // Initialize AOS (Animate On Scroll)
@@ -267,6 +268,25 @@ document.addEventListener('DOMContentLoaded', function () {
       if (savedTheme === 'light') {
         document.documentElement.classList.add('light-theme');
       }
+    }
+  }
+
+  // Text reveal animation for hero title
+  function initTextRevealAnimation() {
+    const textRevealElement = document.querySelector('.text-reveal');
+    if (textRevealElement) {
+      const text = textRevealElement.textContent;
+      textRevealElement.innerHTML = ''; // Clear the original text
+      text.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        if (char === ' ') {
+          span.innerHTML = '&nbsp;'; // Use non-breaking space for spaces
+        } else {
+          span.textContent = char;
+        }
+        span.style.animationDelay = `${index * 0.05}s`;
+        textRevealElement.appendChild(span);
+      });
     }
   }
 
