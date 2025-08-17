@@ -709,34 +709,34 @@
 </head>
 
 
-<body class="bg-gradient-dark text-white font-sans">
+<body class="bg-gradient-dark text-white font-sans" data-barba="wrapper">
   <nav
     class="fixed w-full z-50 transition-all duration-300 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800/50"
     id="navbar">
     <div class="container mx-auto px-6 flex items-center justify-between">
-      <a href="#" class="text-3xl font-extrabold relative text-decoration-none group">
+      <a href="index.html" class="text-3xl font-extrabold relative text-decoration-none group">
         <span
           class="relative inline-block font-display gradient-text transform perspective-500 transition-transform duration-300 group-hover:scale-110">KS</span>
       </a>
 
       <!-- Desktop navigation -->
       <ul class="hidden lg:flex items-center gap-x-10">
-        <li><a href="#home"
+        <li><a href="index.html"
             class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
         </li>
-        <li><a href="#about"
+        <li><a href="about.html"
             class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">About</a>
         </li>
-        <li><a href="#experience"
+        <li><a href="experience.html"
             class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Experience</a>
         </li>
-        <li><a href="#projects"
+        <li><a href="projects.html"
             class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Projects</a>
         </li>
-        <li><a href="#skills"
+        <li><a href="skills.html"
             class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Skills</a>
         </li>
-        <li><a href="#contact"
+        <li><a href="contact.html"
             class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
         </li>
       </ul>
@@ -757,22 +757,22 @@
       <div id="mobile-menu"
         class="fixed inset-0 bg-neutral-950/95 backdrop-blur-md flex flex-col items-center justify-center z-40 hidden">
         <ul class="flex flex-col items-center space-y-8">
-          <li><a href="#home"
+          <li><a href="index.html"
               class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Home</a>
           </li>
-          <li><a href="#about"
+          <li><a href="about.html"
               class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">About</a>
           </li>
-          <li><a href="#experience"
+          <li><a href="experience.html"
               class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Experience</a>
           </li>
-          <li><a href="#projects"
+          <li><a href="projects.html"
               class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Projects</a>
           </li>
-          <li><a href="#skills"
+          <li><a href="skills.html"
               class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Skills</a>
           </li>
-          <li><a href="#contact"
+          <li><a href="contact.html"
               class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Contact</a>
           </li>
         </ul>
@@ -1915,6 +1915,8 @@
       </div>
   </footer>
 
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="js/main.js"></script>
   <script>
     // Enhanced mobile responsiveness and navigation fix

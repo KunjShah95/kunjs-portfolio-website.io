@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunj Shah - Developer, Cybersecurity & AI Enthusiast</title>
+  <meta name="description"
+    content="Kunj Shah - Full Stack Developer, Cybersecurity Researcher & AI/ML Engineer. Building innovative solutions with modern technologies." />
+  <meta name="keywords"
+    content="Kunj Shah, Full Stack Developer, Cybersecurity, AI, Machine Learning, Web Development, Portfolio" />
+  <meta name="author" content="Kunj Shah" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Kunj Shah - Developer & AI Enthusiast" />
+  <meta property="og:description" content="Full Stack Developer, Cybersecurity Researcher & AI/ML Engineer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://ui-avatars.com/api/?name=Kunj+Shah&background=0ea5e9&color=ffffff&size=400" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon"
+    href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzBlYTVlOSIvPgo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiPktTPC90ZXh0Pgo8L3N2Zz4K" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Professional Blue-based palette inspired by top tech companies
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            // Sophisticated neutral grays
+            neutral: {
+              50: '#fafafa',
+              100: '#f5f5f5',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+              400: '#a3a3a3',
+              500: '#737373',
+              600: '#525252',
+              700: '#404040',
+              800: '#262626',
+              900: '#171717',
+              950: '#0a0a0a',
+            },
+            // Premium accent color (subtle gold/amber for elegance)
+            accent: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+              950: '#451a03',
+            },
+            // Success/Error states
+            success: {
+              50: '#f0fdf4',
+              500: '#22c55e',
+              600: '#16a34a',
+            },
+            error: {
+              50: '#fef2f2',
+              500: '#ef4444',
+              600: '#dc2626',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'monospace'],
+          },
+          backgroundImage: {
+            'gradient-primary': 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)',
+            'gradient-accent': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+            'gradient-dark': 'linear-gradient(135deg, #0a0a0a 0%, #171717 100%)',
+            'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
+            'mesh-bg': 'linear-gradient(135deg, #0a0a0a 0%, #171717 25%, #262626 50%, #171717 75%, #0a0a0a 100%)',
+          },
+          boxShadow: {
+            'professional': '0 4px 25px -4px rgba(0, 0, 0, 0.25)',
+            'professional-lg': '0 10px 50px -10px rgba(0, 0, 0, 0.25)',
+            'glow-primary': '0 0 30px rgba(14, 165, 233, 0.3)',
+            'glow-accent': '0 0 30px rgba(245, 158, 11, 0.3)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out forwards',
+            'slide-up': 'slideUp 0.6s ease-out forwards',
+            'slide-down': 'slideDown 0.6s ease-out forwards',
+            'slide-left': 'slideLeft 0.6s ease-out forwards',
+            'slide-right': 'slideRight 0.6s ease-out forwards',
+            'scale-in': 'scaleIn 0.6s ease-out forwards',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+            'gradient-shift': 'gradientShift 8s ease infinite',
+            'rotate-slow': 'rotateSlow 20s linear infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideDown: {
+              '0%': { opacity: '0', transform: 'translateY(-30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideLeft: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            slideRight: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            bounceGentle: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            gradientShift: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            },
+            rotateSlow: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' }
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(20, 184, 166, 0.3)' },
+              '100%': { boxShadow: '0 0 30px rgba(20, 184, 166, 0.6)' }
+            }
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            'mesh-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          },
+          backdropBlur: {
+            xs: '2px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Professional glassmorphism effects */
+    .glass-card {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(14, 165, 233, 0.2);
+      box-shadow: 0 16px 64px rgba(14, 165, 233, 0.15);
+      transform: translateY(-8px);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #171717;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #0284c7, #075985);
+    }
+
+    .project-card {
+      transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 12px 40px 0 rgba(14, 165, 233, 0.15), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+      transform: translateY(-6px) scale(1.02);
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: linear-gradient(90deg, #0ea5e9 0%, #0284c7 100%);
+      color: #fff;
+      box-shadow: 0 2px 8px 0 rgba(14, 165, 233, 0.1);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    .action-btn:hover {
+      background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px 0 rgba(14, 165, 233, 0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    .project-card .rounded-t-2xl {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    /* --- Enhanced Responsive CSS Block --- */
+
+    html {
+      font-size: 16px;
+    }
+
+    @media (max-width: 1200px) {
+      html {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        font-size: 13px;
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #181c2b 0%, #232946 100%);
+      color: #f4f4f4;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Navbar Responsive */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(24, 28, 43, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background: rgba(24, 28, 43, 0.98);
+        padding: 2rem 0 2rem 0;
+        gap: 1.5rem;
+        z-index: 999;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+      }
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 28px;
+      background: #f4f4f4;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    @media (max-width: 900px) {
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Hero Section Responsive */
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2.5rem 2rem 2.5rem;
+      min-height: 60vh;
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 1.2rem 1.5rem 1.2rem;
+        gap: 1.5rem;
+      }
+    }
+
+    .hero-content {
+      flex: 1 1 60%;
+    }
+
+    .hero-image {
+      flex: 1 1 40%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-image img {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+    }
+
+    @media (max-width: 900px) {
+      .hero-image {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-image img {
+        max-width: 220px;
+      }
+    }
+
+    /* Section Responsive */
+    section {
+      padding: 3.5rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      section {
+        padding: 2rem 1.2rem;
+      }
+    }
+
+    /* Project Grid Responsive */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.2rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    .project-card {
+      background: rgba(36, 40, 61, 0.85);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.025);
+      box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    @media (max-width: 600px) {
+      .project-card {
+        padding: 1.2rem 0.8rem 1rem 0.8rem;
+        gap: 0.8rem;
+      }
+    }
+
+    .project-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .project-card img {
+        max-height: 120px;
+        border-radius: 0.7rem;
+      }
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .project-title {
+        font-size: 1.1rem;
+      }
+    }
+
+    .project-desc {
+      font-size: 1rem;
+      color: #c9c9d1;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .project-desc {
+        font-size: 0.95rem;
+      }
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .project-tag {
+      background: linear-gradient(90deg, #4f8cff 0%, #a084ee 100%);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .action-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #4f8cff 0%, #a084ee 100%);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      margin-right: 0.7rem;
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.08);
+      transition: background 0.18s, transform 0.18s;
+      text-decoration: none;
+    }
+
+    .action-btn:hover,
+    .action-btn:focus {
+      background: linear-gradient(90deg, #a084ee 0%, #4f8cff 100%);
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    @media (max-width: 600px) {
+      .action-btn {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.1rem;
+        margin-right: 0.4rem;
+      }
+    }
+
+    /* Filter Bar Responsive */
+    .filter-bar {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 2.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 10;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .filter-bar {
+        gap: 0.7rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    .filter-btn {
+      background: rgba(36, 40, 61, 0.85);
+      color: #a084ee;
+      border: 2px solid #4f8cff;
+      border-radius: 2rem;
+      padding: 0.5rem 1.3rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, border 0.18s;
+      outline: none;
+      margin-bottom: 0.2rem;
+    }
+
+    .filter-btn.active,
+    .filter-btn:focus {
+      background: linear-gradient(90deg, #4f8cff 0%, #a084ee 100%);
+      color: #fff;
+      border: 2px solid #a084ee;
+    }
+
+    @media (max-width: 600px) {
+      .filter-btn {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.9rem;
+      }
+    }
+
+    /* Skills Grid Responsive */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+    }
+
+    .skill-card {
+      background: rgba(36, 40, 61, 0.85);
+      border-radius: 1.2rem;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.10);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #f4f4f4;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 24px 0 rgba(160, 132, 238, 0.12);
+    }
+
+    @media (max-width: 600px) {
+      .skill-card {
+        font-size: 0.98rem;
+        padding: 0.8rem 0.5rem;
+      }
+    }
+
+    .about-content,
+    .contact-content,
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      color: #c9c9d1;
+    }
+
+    @media (max-width: 600px) {
+
+      .about-content,
+      .contact-content,
+      .footer-content {
+        font-size: 0.98rem;
+        padding: 0 0.2rem;
+      }
+    }
+
+    footer {
+      background: rgba(24, 28, 43, 0.92);
+      padding: 2rem 0 1.2rem 0;
+      text-align: center;
+      font-size: 1rem;
+      color: #a084ee;
+      border-top: 1px solid #232946;
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        font-size: 0.92rem;
+        padding: 1.2rem 0 0.7rem 0;
+      }
+    }
+
+    #gemini-widget,
+    #botpress-webchat {
+      position: fixed !important;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 2000;
+      max-width: 340px;
+      width: 90vw;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.22);
+      border-radius: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+
+      #gemini-widget,
+      #botpress-webchat {
+        bottom: 0.7rem;
+        right: 0.7rem;
+        max-width: 98vw;
+        width: 98vw;
+        border-radius: 0.7rem;
+      }
+    }
+
+    button,
+    .action-btn,
+    .filter-btn {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(160, 132, 238, 0.18);
+    }
+
+    @media (max-width: 600px) {
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    }
+
+    /* --- End Enhanced Responsive CSS Block --- */
+  </style>
+</head>
+
+
+<body class="bg-gradient-dark text-white font-sans" data-barba="wrapper">
+  <nav
+    class="fixed w-full z-50 transition-all duration-300 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800/50"
+    id="navbar">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="text-3xl font-extrabold relative text-decoration-none group">
+        <span
+          class="relative inline-block font-display gradient-text transform perspective-500 transition-transform duration-300 group-hover:scale-110">KS</span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <ul class="hidden lg:flex items-center gap-x-10">
+        <li><a href="index.html"
+            class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+        </li>
+        <li><a href="about.html"
+            class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">About</a>
+        </li>
+        <li><a href="experience.html"
+            class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Experience</a>
+        </li>
+        <li><a href="projects.html"
+            class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Projects</a>
+        </li>
+        <li><a href="skills.html"
+            class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Skills</a>
+        </li>
+        <li><a href="contact.html"
+            class="nav-link text-neutral-300 font-medium text-lg relative py-2 hover:text-primary-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button id="menu-toggle"
+        class="mobile-menu-button lg:hidden flex flex-col space-y-1.5 focus:outline-none z-50 p-2 cursor-pointer">
+        <div class="hamburger-icon">
+          <span
+            class="w-6 h-0.5 bg-neutral-300 transition-transform duration-300 ease-in-out origin-center block"></span>
+          <span class="w-6 h-0.5 bg-neutral-300 transition-opacity duration-300 ease-in-out block"></span>
+          <span
+            class="w-6 h-0.5 bg-neutral-300 transition-transform duration-300 ease-in-out origin-center block"></span>
+        </div>
+      </button>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu"
+        class="fixed inset-0 bg-neutral-950/95 backdrop-blur-md flex flex-col items-center justify-center z-40 hidden">
+        <ul class="flex flex-col items-center space-y-8">
+          <li><a href="index.html"
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Home</a>
+          </li>
+          <li><a href="about.html"
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">About</a>
+          </li>
+          <li><a href="experience.html"
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Experience</a>
+          </li>
+          <li><a href="projects.html"
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Projects</a>
+          </li>
+          <li><a href="skills.html"
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Skills</a>
+          </li>
+          <li><a href="contact.html"
+              class="mobile-nav-link text-neutral-200 text-2xl font-medium hover:text-primary-400 transition-colors duration-300 cursor-pointer">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<main data-barba="container" data-barba-namespace="contact">
+  <section id="contact" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900">
+    <!-- Decorative elements -->
+    <div class="absolute -z-10 inset-0 opacity-30">
+      <div class="absolute left-[10%] top-[20%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
+      <div class="absolute right-[10%] bottom-[10%] w-72 h-72 rounded-full bg-accent-500/20 blur-3xl"></div>
+    </div>
+    <div class="container mx-auto px-6">
+      <h2
+        class="text-center text-5xl lg:text-6xl font-bold font-display mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-20px] after:h-1.5 after:w-24 after:rounded-full after:bg-gradient-primary">
+        Contact
+      </h2>
+      <div class="flex flex-col md:flex-row gap-8 sm:gap-12 justify-center items-center">
+        <!-- Social Media -->
+        <div
+          class="glass-card rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-primary hover:border-primary-500/30 border-primary-600/20 w-full max-w-md">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-neutral-100 text-center">Connect On Social Media
+          </h3>
+          <div class="flex justify-center gap-4 sm:gap-6 flex-wrap contact-social-links">
+            <a href="https://github.com/KunjShah95" target="_blank"
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fab fa-github text-base sm:text-lg"></i>
+            </a>
+            <a href="https://linkedin.com/in/kunjshah05" target="_blank"
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fab fa-linkedin-in text-base sm:text-lg"></i>
+            </a>
+            <a href="https://twitter.com/INDIA_KUNJ" target="_blank"
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fab fa-twitter text-base sm:text-lg"></i>
+            </a>
+            <a href="mailto:kunjkshah05@gmail.com"
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110">
+              <i class="fas fa-envelope text-base sm:text-lg"></i>
+            </a>
+            <a href="https://huggingface.co/kunjshah01" target="_blank"
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-300 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary hover:scale-110"
+              title="Hugging Face">
+              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"
+                class="w-5 h-5 sm:w-6 sm:h-6" style="filter: brightness(0) invert(1);" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+  <!-- ... -->
+</body>
+
+</html>
