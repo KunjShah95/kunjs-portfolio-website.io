@@ -781,17 +781,20 @@
   </nav>
 
   <header id="home"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 perspective-1000">
     <!-- Animated Background Elements -->
-    <div class="absolute inset-0 overflow-hidden -z-10">
+    <div class="absolute inset-0 overflow-hidden -z-10 transform-style-3d">
       <div
-        class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] top-[15%] sm:top-[20%] left-[5%] sm:left-[10%] rounded-full bg-primary-500/10 animate-float-professional">
+        class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] top-[15%] sm:top-[20%] left-[5%] sm:left-[10%] rounded-full bg-primary-500/10 animate-float-professional"
+        data-parallax="0.3">
       </div>
       <div
-        class="absolute w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] -bottom-[25px] sm:-bottom-[50px] lg:-bottom-[100px] -right-[25px] sm:-right-[50px] lg:-right-[100px] rounded-full bg-accent-500/10 animate-float-professional">
+        class="absolute w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] -bottom-[25px] sm:-bottom-[50px] lg:-bottom-[100px] -right-[25px] sm:-right-[50px] lg:-right-[100px] rounded-full bg-accent-500/10 animate-float-professional"
+        data-parallax="0.5">
       </div>
       <div
-        class="absolute w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] top-[55%] sm:top-[60%] left-[20%] sm:left-[25%] md:left-[30%] rounded-full bg-primary-400/10 animate-float-professional">
+        class="absolute w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] top-[55%] sm:top-[60%] left-[20%] sm:left-[25%] md:left-[30%] rounded-full bg-primary-400/10 animate-float-professional"
+        data-parallax="0.2">
       </div>
 
       <!-- Professional gradient overlay -->
@@ -799,9 +802,9 @@
     </div>
 
     <!-- Hero Content -->
-    <div class="text-center z-10 px-3 sm:px-4 md:px-6 max-w-4xl w-full">
+    <div class="text-center z-10 px-3 sm:px-4 md:px-6 max-w-4xl w-full transform-style-3d" data-parallax="0.1">
       <h1
-        class="hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display mb-4 sm:mb-6 md:mb-8 gradient-text filter drop-shadow-xl leading-tight">
+        class="hero-title text-reveal text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display mb-4 sm:mb-6 md:mb-8 gradient-text filter drop-shadow-xl leading-tight transform transition-transform duration-500 hover:scale-105 hover:rotate-x-10 hover:rotate-y-5">
         Kunj Shah
       </h1>
       <p
@@ -809,15 +812,15 @@
         Developer | Cybersecurity Learner | AI Enthusiast
       </p>
       <!-- Hero Section Buttons -->
-      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 hero-buttons px-2 sm:px-4">
+      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 hero-buttons px-2 sm:px-4" data-parallax="0.1">
         <a href="#projects"
-          class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-white font-bold overflow-hidden group bg-gradient-primary transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:-translate-y-1 w-full sm:w-auto min-h-[44px] text-sm md:text-base">
+          class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-white font-bold overflow-hidden group bg-gradient-primary transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:-translate-y-1 w-full sm:w-auto min-h-[44px] text-sm md:text-base animate-float">
           <span class="relative z-10 uppercase tracking-wider">View My Work</span>
           <span
             class="absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-25deg] group-hover:translate-x-[100%] transition-all duration-700"></span>
         </a>
         <a href="#contact"
-          class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-neutral-200 font-bold overflow-hidden group bg-transparent border-2 border-primary-500 transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:bg-primary-500 hover:text-white hover:-translate-y-1 w-full sm:w-auto min-h-[44px] text-sm md:text-base">
+          class="relative inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-3 md:py-4 rounded-full text-neutral-200 font-bold overflow-hidden group bg-transparent border-2 border-primary-500 transition-all duration-300 shadow-professional hover:shadow-glow-primary hover:bg-primary-500 hover:text-white hover:-translate-y-1 w-full sm:w-auto min-h-[44px] text-sm md:text-base animate-float">
           <span class="relative z-10 uppercase tracking-wider">Contact Me</span>
           <span
             class="absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-25deg] group-hover:translate-x-[100%] transition-all duration-700"></span>
@@ -838,7 +841,7 @@
     </div>
   </header>
 
-  <section id="about" class="py-24 relative bg-gradient-to-b from-neutral-900 to-neutral-950">
+  <section id="about" class="py-24 relative bg-gradient-to-b from-neutral-900 to-neutral-950" data-aos="fade-up">
     <!-- Decorative elements -->
     <div class="absolute -z-10 inset-0 opacity-30">
       <div class="absolute right-[5%] top-[10%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
@@ -919,7 +922,7 @@
     </div>
   </section>
 
-  <section id="experience" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900">
+  <section id="experience" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900" data-aos="fade-up">
     <!-- Decorative elements -->
     <div class="absolute -z-10 inset-0 opacity-30">
       <div class="absolute left-[5%] top-[10%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
@@ -1067,7 +1070,7 @@
     </div>
   </section>
 
-  <section id="projects" class="py-24 relative bg-gradient-to-b from-neutral-900 to-neutral-950">
+  <section id="projects" class="py-24 relative bg-gradient-to-b from-neutral-900 to-neutral-950" data-aos="fade-up">
     <!-- Decorative elements -->
     <div class="absolute -z-10 inset-0 opacity-30">
       <div class="absolute right-[15%] top-[20%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
@@ -1455,7 +1458,7 @@
     </div>
   </section>
 
-  <section id="skills" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900">
+  <section id="skills" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900" data-aos="fade-up">
     <!-- Decorative elements -->
     <div class="absolute -z-10 inset-0 opacity-30">
       <div class="absolute left-[15%] top-[20%] w-64 h-64 rounded-full bg-accent-500/20 blur-3xl"></div>
@@ -1570,7 +1573,7 @@
     </div>
   </section>
 
-  <section id="contact" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900">
+  <section id="contact" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900" data-aos="fade-up">
     <!-- Decorative elements -->
     <div class="absolute -z-10 inset-0 opacity-30">
       <div class="absolute left-[10%] top-[20%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
