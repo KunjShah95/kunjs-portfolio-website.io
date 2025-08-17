@@ -37,6 +37,7 @@
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <script>
     tailwind.config = {
@@ -779,151 +780,164 @@
       </div>
     </div>
   </nav>
-<main data-barba="container" data-barba-namespace="experience">
-  <section id="experience" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900">
+<main data-barba="container" data-barba-namespace="projects">
+  <section id="projects" class="py-24 relative bg-gradient-to-b from-neutral-900 to-neutral-950" data-aos="fade-up">
     <!-- Decorative elements -->
     <div class="absolute -z-10 inset-0 opacity-30">
-      <div class="absolute left-[5%] top-[10%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
-      <div class="absolute right-[5%] bottom-[10%] w-72 h-72 rounded-full bg-accent-500/20 blur-3xl"></div>
+      <div class="absolute right-[15%] top-[20%] w-64 h-64 rounded-full bg-primary-500/20 blur-3xl"></div>
+      <div class="absolute left-[10%] bottom-[10%] w-72 h-72 rounded-full bg-accent-500/20 blur-3xl"></div>
     </div>
 
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 sm:px-6">
       <h2
-        class="text-center text-5xl lg:text-6xl font-bold font-display mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-20px] after:h-1.5 after:w-24 after:rounded-full after:bg-gradient-primary">
-        My Experience</h2>
+        class="section-title text-center text-3xl sm:text-5xl lg:text-6xl font-bold font-display mb-12 sm:mb-16 gradient-text relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-15px] sm:after:bottom-[-20px] after:h-1.5 after:w-16 sm:after:w-24 after:rounded-full after:bg-gradient-primary">
+        My Projects</h2>
 
-      <!-- Timeline - Desktop -->
-      <div class="relative max-w-5xl mx-auto pt-10 hidden lg:block">
-        <!-- Center line -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-primary rounded">
-        </div>
-
-        <!-- Timeline Item 1 -->
-        <div class="mb-16 relative timeline-item">
-          <!-- Timeline dot -->
-          <div
-            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1 w-7 h-7 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10 transition duration-300 hover:scale-125 hover:shadow-glow-primary">
-          </div>
-
-          <!-- Content -->
-          <div class="w-5/12 ml-auto pl-16">
-            <div class="absolute top-0 left-1/2 -translate-y-1 flex items-center">
-              <div
-                class="absolute -left-[190px] glass-card px-4 py-2 rounded-full text-primary-400 font-semibold transition-all duration-300 hover:border-primary-500/30 hover:-translate-y-1">
-                October 2024
-              </div>
-            </div>
-
-            <div
-              class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300">
-              <h3 class="text-2xl font-bold text-neutral-100 mb-1">Open Source Contributor</h3>
-              <h4 class="text-xl font-medium text-primary-400 mb-4">Hacktoberfest 2024</h4>
-              <p class="text-neutral-300 mb-4 leading-relaxed">
-                Actively contributed to multiple open source projects during
-                Hacktoberfest 2024. Submitted 6+ quality pull requests, focusing
-                on improving documentation, fixing bugs, and implementing new
-                features in JavaScript and Python repositories.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span
-                  class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">Open
-                  Source</span>
-                <span
-                  class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">GitHub</span>
-                <span
-                  class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">Collaboration</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Timeline Item 2 -->
-        <div class="mb-16 relative timeline-item">
-          <!-- Timeline dot -->
-          <div
-            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1 w-7 h-7 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10 transition duration-300 hover:scale-125 hover:shadow-glow-primary">
-          </div>
-
-          <!-- Content -->
-          <div class="w-5/12 mr-auto pr-16">
-            <div class="absolute top-0 left-1/2 -translate-y-1 flex items-center">
-              <div
-                class="absolute left-8 glass-card px-4 py-2 rounded-full text-primary-400 font-semibold transition-all duration-300 hover:border-primary-500/30 hover:-translate-y-1">
-                October 2024
-              </div>
-            </div>
-
-            <div
-              class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300">
-              <h3 class="text-2xl font-bold text-neutral-100 mb-1">Open Source AI Contributor</h3>
-              <h4 class="text-xl font-medium text-primary-400 mb-4">DevFest AI 2024</h4>
-              <p class="text-neutral-300 mb-4 leading-relaxed">
-                Contributed to open source during DevFest AI 2024, a community-driven event focused on AI innovation.
-                Developed and released an open source computer vision application that
-                helps detect and prevent security vulnerabilities in real-time. The project received recognition for
-                technical excellence and is now maintained as a community resource on GitHub.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span
-                  class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-accent-500/30">AI
-                  Development</span>
-                <span
-                  class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">Open
-                  Source</span>
-                <span
-                  class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">GitHub</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+      <!-- Project filters -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-12 px-2 sm:px-4">
+        <button
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 active:bg-primary-500/20 active:text-primary-200 active:border-primary-500/50 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          data-filter="all">All</button>
+        <button
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          data-filter="web">Web Dev</button>
+        <button
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          data-filter="ai">AI/ML</button>
+        <button
+          class="filter-btn px-3 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 rounded-full glass-card text-neutral-300 transition-all duration-300 hover:border-primary-500/30 hover:bg-primary-500/10 hover:text-primary-300 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          data-filter="security" id="cybersecurity-btn">Security</button>
       </div>
 
-      <!-- Timeline - Mobile -->
-      <div class="lg:hidden relative max-w-5xl mx-auto pt-10">
-        <!-- Left line -->
-        <div class="absolute left-6 top-0 bottom-0 w-1 bg-gradient-primary rounded"></div>
-
-        <!-- Mobile Timeline Item 1 -->
-        <div class="ml-16 mb-12 relative timeline-item">
-          <!-- Timeline dot -->
-          <div
-            class="absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10">
+      <!-- Projects grid -->
+      <div class="swiper-container relative w-full h-full">
+        <div class="swiper-wrapper">
+          <!-- PAYMAN AI -->
+          <div class="swiper-slide">
+            <div
+              class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
+              data-category="web">
+              <div class="relative overflow-hidden rounded-t-2xl h-56">
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                  alt="PAYMAN AI"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
+              </div>
+              <div class="p-7 flex flex-col h-80">
+                <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">PAYMAN AI</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">Python</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">AI</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">Property
+                    Management</span>
+                </div>
+                <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">AI-powered payment management system for property
+                  owners. Automated reminders, payment tracking, and analytics.</p>
+                <div class="flex justify-between items-center mt-auto gap-2">
+                  <a href="https://github.com/KunjShah95/PAYMAN-AI-PROJECT" target="_blank" class="action-btn">
+                    <i class="fab fa-github mr-2"></i> Code
+                  </a>
+                  <a href="https://payman-ai-project.vercel.app/" target="_blank" class="action-btn">
+                    Live Demo <i class="fas fa-external-link-alt ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div
-            class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300">
-            <div class="text-primary-400 font-semibold mb-3">October 2024</div>
-            <h3 class="text-xl font-bold text-neutral-100 mb-1">Open Source Contributor</h3>
-            <h4 class="text-lg font-medium text-primary-400 mb-3">Hacktoberfest 2024</h4>
-            <p class="text-neutral-300 mb-3 text-sm leading-relaxed">
-              Actively contributed to multiple open source projects during
-              Hacktoberfest 2024. Submitted 6+ quality pull requests, focusing
-              on improving documentation, fixing bugs, and implementing new
-              features.
-            </p>
+          <!-- Prime News -->
+          <div class="swiper-slide">
+            <div
+              class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
+              data-category="web">
+              <div class="relative overflow-hidden rounded-t-2xl h-56">
+                <img
+                  src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                  alt="Prime News"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
+              </div>
+              <div class="p-7 flex flex-col h-80">
+                <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">Prime News</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">HTML</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">CSS</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">JavaScript</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">News
+                    API</span>
+                </div>
+                <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">A modern, responsive news website featuring
+                  real-time
+                  news updates, categorized content, and an intuitive user interface. Built with vanilla web
+                  technologies
+                  and integrated with news APIs for fresh content delivery.</p>
+                <div class="flex justify-between items-center mt-auto gap-2">
+                  <a href="https://github.com/KunjShah95/NEWS-WEBSITE" target="_blank" class="action-btn">
+                    <i class="fab fa-github mr-2"></i> Code
+                  </a>
+                  <a href="https://primenews-eight.vercel.app/landing.html" target="_blank" class="action-btn">
+                    Live Demo <i class="fas fa-external-link-alt ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sentiment Analysis MCP -->
+          <div class="swiper-slide">
+            <div
+              class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
+              data-category="ai">
+              <div class="relative overflow-hidden rounded-t-2xl h-56">
+                <img
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                  alt="Sentiment Analysis MCP"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
+              </div>
+              <div class="p-7 flex flex-col h-80">
+                <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">Sentiment Analysis MCP</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Python</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">MCP</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">NLP</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">Sentiment
+                    Analysis</span>
+                </div>
+                <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">
+                  Model Context Protocol (MCP) server for sentiment analysis using advanced NLP techniques. Provides
+                  real-time sentiment scoring and analysis capabilities.
+                </p>
+                <div class="flex justify-between items-center mt-auto gap-2">
+                  <a href="https://github.com/KunjShah01/sentiment-analysis-mcp" target="_blank" class="action-btn">
+                    <i class="fab fa-github mr-2"></i> Code
+                  </a>
+                  <a href="https://huggingface.co/spaces/kunjshah01/mcp-sentiment" target="_blank" class="action-btn">
+                    Try Demo <i class="fas fa-external-link-alt ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
 
-        <!-- Mobile Timeline Item 2 -->
-        <div class="ml-16 mb-12 relative timeline-item">
-          <!-- Timeline dot -->
-          <div
-            class="absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10">
-          </div>
-
-          <div
-            class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300">
-            <div class="text-primary-400 font-semibold mb-3">October 2024</div>
-            <h3 class="text-xl font-bold text-neutral-100 mb-1">Open Source AI Contributor</h3>
-            <h4 class="text-lg font-medium text-primary-400 mb-3">DevFest AI 2024</h4>
-            <p class="text-neutral-300 mb-3 text-sm leading-relaxed">
-              Contributed to open source during DevFest AI 2024. Developed and released an open source computer
-              vision application for security vulnerability detection.
-            </p>
-          </div>
-        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
@@ -931,6 +945,7 @@
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
   <!-- ... -->
 </body>

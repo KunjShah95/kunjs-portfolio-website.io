@@ -75,7 +75,44 @@ function initPageTransitions() {
   });
 }
 
+function initParallax() {
+  const parallaxElements = document.querySelectorAll('[data-parallax]');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    parallaxElements.forEach(el => {
+      const speed = el.dataset.parallax;
+      const yPos = -(scrolled * speed);
+      el.style.transform = `translateY(${yPos}px)`;
+    });
+  });
+}
+
+function initSwiper() {
+  const swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   initAnimations();
   initPageTransitions();
+  initParallax();
+  initSwiper();
 });
