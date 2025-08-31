@@ -372,6 +372,85 @@ body::before {
   box-shadow: var(--shadow-glow);
 }
 
+/* Glassy buttons */
+.btn-primary {
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 8px 24px rgba(2,132,199,0.18), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(14,165,233,0.18);
+  backdrop-filter: blur(6px);
+}
+
+.btn, .btn-primary, .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+}
+
+/* Button hover/focus animations */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  transform: translateX(-110%);
+  transition: transform 0.6s cubic-bezier(0.2,0.9,0.2,1);
+  pointer-events: none;
+}
+
+.btn:hover::after,
+.btn:focus::after {
+  transform: translateX(0%);
+}
+
+/* Cool shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.btn-primary.shimmer {
+  background-image: linear-gradient(120deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.02) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Floating morph effect */
+@keyframes float-morph {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.btn-float {
+  animation: float-morph 4s ease-in-out infinite;
+}
+
+/* .action-btn to match buttons */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+.action-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+
 /* Magnetic effect */
 .btn::before {
   content: "";
