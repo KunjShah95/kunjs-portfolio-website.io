@@ -1,5 +1,70 @@
 // Modern Portfolio JavaScript
 
+// Add smooth scrolling functionality
+function initSmoothScrolling() {
+  // Add smooth scrolling for all navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const headerOffset = 80; // Account for fixed header
+        const elementPosition = target.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.style.display = 'none';
+          document.body.style.overflow = '';
+          const hamburgerIcon = document.querySelector('.hamburger-icon');
+          if (hamburgerIcon) hamburgerIcon.classList.remove('open');
+        }
+      }
+    });
+  });
+}
+
+// Add insights loading functionality
+function initInsightsLoading() {
+  const loadMoreBtn = document.getElementById('load-more-insights');
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', function () {
+      // Simulate loading more insights
+      this.textContent = 'Loading...';
+      this.disabled = true;
+
+      setTimeout(() => {
+        this.textContent = 'More insights coming soon!';
+        setTimeout(() => {
+          this.textContent = 'Load More Insights';
+          this.disabled = false;
+        }, 2000);
+      }, 1000);
+    });
+  }
+}
+
+// Add click analytics and user feedback
+function addButtonFeedback() {
+  const buttons = document.querySelectorAll('button, .btn, a[role="button"]');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      // Add visual feedback
+      this.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 150);
+    });
+  });
+}
+
 function initAnimations() {
   // Initialize AOS (Animate On Scroll)
   if (typeof AOS !== 'undefined') {
@@ -62,8 +127,10 @@ function initParallax() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  initSmoothScrolling();
   initAnimations();
   initParallax();
+  addButtonFeedback();
 
   // Fix all navigation functionality
   const navbar = document.getElementById('navbar');
@@ -234,59 +301,64 @@ document.addEventListener('DOMContentLoaded', function () {
   const botpressIframe = document.getElementById('botpress-chatbot-iframe');
   let botpressOpen = false;
 
-  botpressBtn.onclick = function () {
-    botpressOpen = !botpressOpen;
+  if (botpressBtn && botpressIframe) {
+    botpressBtn.onclick = function () {
+      botpressOpen = !botpressOpen;
 
-    if (botpressOpen) {
-      botpressIframe.style.visibility = 'visible';
-      botpressIframe.style.opacity = '1';
-      botpressIframe.style.pointerEvents = 'auto';
-      botpressBtn.innerText = '✖';
-      botpressBtn.setAttribute('aria-label', 'Close chat');
-      botpressBtn.style.transform = 'scale(1.1)';
+      if (botpressOpen) {
+        botpressIframe.style.visibility = 'visible';
+        botpressIframe.style.opacity = '1';
+        botpressIframe.style.pointerEvents = 'auto';
+        botpressBtn.innerText = '✖';
+        botpressBtn.setAttribute('aria-label', 'Close chat');
+        botpressBtn.style.transform = 'scale(1.1)';
 
-      // Prevent background scroll on mobile when chat is open
-      if (window.innerWidth <= 768) {
-        document.body.style.overflow = 'hidden';
+        // Prevent background scroll on mobile when chat is open
+        if (window.innerWidth <= 768) {
+          document.body.style.overflow = 'hidden';
+        }
+      } else {
+        botpressIframe.style.visibility = 'hidden';
+        botpressIframe.style.opacity = '0';
+        botpressIframe.style.pointerEvents = 'none';
+        botpressBtn.innerText = '💬';
+        botpressBtn.setAttribute('aria-label', 'Open chat');
+        botpressBtn.style.transform = 'scale(1)';
+
+        // Restore scroll on mobile
+        document.body.style.overflow = '';
       }
-    } else {
-      botpressIframe.style.visibility = 'hidden';
-      botpressIframe.style.opacity = '0';
-      botpressIframe.style.pointerEvents = 'none';
-      botpressBtn.innerText = '💬';
-      botpressBtn.setAttribute('aria-label', 'Open chat');
-      botpressBtn.style.transform = 'scale(1)';
+    };
 
-      // Restore scroll on mobile
-      document.body.style.overflow = '';
-    }
-  };
-
-  // Close chatbot when clicking outside on mobile
-  document.addEventListener('click', function (e) {
-    if (botpressOpen && window.innerWidth <= 768) {
-      const container = document.getElementById('botpress-chatbot-container');
-      if (!container.contains(e.target)) {
-        botpressBtn.click();
+    // Close chatbot when clicking outside on mobile
+    document.addEventListener('click', function (e) {
+      if (botpressOpen && window.innerWidth <= 768) {
+        const container = document.getElementById('botpress-chatbot-container');
+        if (container && !container.contains(e.target)) {
+          botpressBtn.click();
+        }
       }
-    }
-  });
-
-  // Handle orientation changes on mobile
-  window.addEventListener('orientationchange', function () {
-    if (botpressOpen && window.innerWidth <= 768) {
-      setTimeout(() => {
-        // Adjust iframe size after orientation change
-        const iframe = document.getElementById('botpress-chatbot-iframe');
-        iframe.style.height = 'calc(100vh - 80px)';
-      }, 500);
-    }
-  });
-
-  // Add haptic feedback on supported devices
-  if ('vibrate' in navigator) {
-    botpressBtn.addEventListener('click', () => {
-      navigator.vibrate(50);
     });
+
+    // Handle orientation changes on mobile
+    window.addEventListener('orientationchange', function () {
+      if (botpressOpen && window.innerWidth <= 768) {
+        setTimeout(() => {
+          // Adjust iframe size after orientation change
+          const iframe = document.getElementById('botpress-chatbot-iframe');
+          if (iframe) iframe.style.height = 'calc(100vh - 80px)';
+        }, 500);
+      }
+    });
+
+    // Add haptic feedback on supported devices
+    if ('vibrate' in navigator) {
+      botpressBtn.addEventListener('click', () => {
+        navigator.vibrate(50);
+      });
+    }
+  } else {
+    // Chatbot UI not present on this page
+    // console.debug('Chatbot elements not found');
   }
 });

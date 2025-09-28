@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" spellcheck="false">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
   <meta name="keywords"
     content="Kunj Shah, Full Stack Developer, Cybersecurity, AI, Machine Learning, Web Development, Portfolio" />
   <meta name="author" content="Kunj Shah" />
-
+  <link rel="stylesheet" href="main.css">
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Kunj Shah - Developer & AI Enthusiast" />
   <meta property="og:description" content="Full Stack Developer, Cybersecurity Researcher & AI/ML Engineer" />
@@ -37,7 +37,7 @@
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   
+
   <script>
     tailwind.config = {
       theme: {
@@ -188,172 +188,250 @@
       }
     }
   </script>
-  <!-- Removed custom CSS. All styling is now handled by Tailwind utility classes for a clean, modern, professional look. -->
+
+  <style>
+    /* Enhanced interactive elements */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    /* Button click feedback */
+    button:active,
+    .btn:active,
+    a[role="button"]:active {
+      transform: scale(0.98) !important;
+    }
+
+    /* Improved focus states */
+    button:focus,
+    a:focus {
+      outline: 2px solid #0ea5e9;
+      outline-offset: 2px;
+    }
+
+    /* Loading state */
+    button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    /* Mobile menu animation */
+    #mobile-menu {
+      transition: all 0.3s ease;
+    }
+
+    /* Smooth transforms */
+    * {
+      transition: transform 0.15s ease;
+    }
+  </style>
 </head>
 
 
-  <body class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white font-sans min-h-screen">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
-        <a href="#home" class="text-2xl sm:text-3xl font-extrabold tracking-tight font-display text-primary-400">Kunj Shah</a>
-        <div class="hidden md:flex space-x-8">
-          <a href="#home" class="hover:text-primary-400 transition">Home</a>
-          <a href="#about" class="hover:text-primary-400 transition">About</a>
-          <a href="#experience" class="hover:text-primary-400 transition">Experience</a>
-          <a href="#projects" class="hover:text-primary-400 transition">Projects</a>
-          <a href="#skills" class="hover:text-primary-400 transition">Skills</a>
-          <a href="#contact" class="hover:text-primary-400 transition">Contact</a>
+<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white font-sans min-h-screen">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-sm">AI</span>
         </div>
-        <button id="menu-toggle" class="md:hidden flex flex-col space-y-1.5 focus:outline-none">
-          <span class="w-7 h-1 bg-white rounded"></span>
-          <span class="w-7 h-1 bg-white rounded"></span>
-          <span class="w-7 h-1 bg-white rounded"></span>
-        </button>
+        <span class="text-xl font-bold text-white">AI Explorer</span>
       </div>
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-950/95 flex flex-col items-center justify-center z-40 px-4">
-        <a href="#home" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">Home</a>
-        <a href="#about" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">About</a>
-        <a href="#experience" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">Experience</a>
-        <a href="#projects" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">Projects</a>
-        <a href="#skills" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">Skills</a>
-        <a href="#contact" class="text-xl sm:text-2xl font-semibold hover:text-primary-400">Contact</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+        <a href="#projects" class="text-gray-300 hover:text-white transition">Projects</a>
+        <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
       </div>
-    </nav>
-
-  <header id="home" class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative">
-    <div class="absolute inset-0 pointer-events-none select-none">
-      <div class="absolute top-8 left-2 w-28 h-28 sm:w-40 sm:h-40 bg-primary-500 opacity-20 rounded-full blur-2xl"></div>
-      <div class="absolute bottom-4 right-2 w-40 h-40 sm:w-60 sm:h-60 bg-yellow-400 opacity-10 rounded-full blur-3xl"></div>
+      <div class="flex items-center gap-4">
+        <a href="resume/kunj_resume.pdf" download="Kunj_Shah_Resume.pdf"
+          class="hidden md:block px-4 py-2 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition no-underline">Resume</a>
+        <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
+          <img src="images/kunj.jpg" alt="Kunj Shah" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <button id="menu-toggle" class="md:hidden flex flex-col space-y-1.5 focus:outline-none">
+        <span class="w-7 h-1 bg-white rounded"></span>
+        <span class="w-7 h-1 bg-white rounded"></span>
+        <span class="w-7 h-1 bg-white rounded"></span>
+      </button>
     </div>
-    <div class="relative z-10 flex flex-col items-center text-center px-2 sm:px-4">
-      <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-primary-400 to-yellow-400 bg-clip-text text-transparent">Kunj Shah</h1>
-      <p class="text-base xs:text-lg sm:text-2xl md:text-3xl text-gray-300 mb-6 sm:mb-8 font-light">Backend · Cybersecurity · AI Enthusiast</p>
-      <div class="hero-cta flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 w-full max-w-xs sm:max-w-none mx-auto items-center justify-center">
-        <a href="#projects" class="px-7 py-3 rounded-full bg-gradient-to-r from-primary-400 to-yellow-400 text-gray-950 font-bold shadow-lg hover:from-yellow-400 hover:to-primary-400 hover:text-white transition-all duration-300 ring-2 ring-primary-400 ring-offset-2 animate-pulse focus:outline-none focus:ring-4 focus:ring-yellow-400" aria-label="View my work">
-          View My Work
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden fixed inset-0 bg-gray-950/95 flex flex-col items-center justify-center z-40 px-4">
+      <a href="#home" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">Home</a>
+      <a href="#about" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">About</a>
+      <a href="#projects" class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 hover:text-primary-400">Projects</a>
+      <a href="#contact" class="text-xl sm:text-2xl font-semibold hover:text-primary-400">Contact</a>
+    </div>
+  </nav>
+
+  <header id="home" class="relative min-h-[70vh] flex items-center justify-center text-center text-white">
+    <div class="absolute inset-0 bg-cover bg-center"
+      style='background-image: linear-gradient(rgba(16, 28, 34, 0.7) 0%, rgba(16, 28, 34, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuARxZEFhkUeLR-ig5ZoHjLetKWniK__UOX4J_7uv_69yE2_XIRiyvWl0F0mGCik6TC0oiJAZHYj8nN1tC-xRNa6hJK9xp_WwLeivZ4uIwRAxTQnr2has3UxCzA2UIm2CT_5xDkvfi49PKFglZi08k1-syZuLP-VkraPBiuqGnzoQ9_IuIN5UK8Uofc4ZKGoRXIaYCwdH6M1REFgzO_RIvkUheuefLcYDX6ZbpuYLE_Tj6HmWeS3Usy5GxUSXusYxrjJSy163558e30");'>
+    </div>
+    <div class="relative z-10 flex flex-col items-center gap-6 px-4 max-w-5xl">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="text-primary-400 font-semibold tracking-wide uppercase text-sm">Junior Developer</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+        Agentic AI & Data Engineering
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-400">Enthusiast</span>
+      </h1>
+      <p class="max-w-3xl text-lg md:text-xl text-white/90 leading-relaxed">
+        Passionate junior developer interested in learning and exploring AI/ML technologies, autonomous agents,
+        and data engineering. Eager to build innovative solutions and grow in the exciting world of artificial
+        intelligence.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-4">
+        <a href="#projects"
+          class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-primary-500 text-base font-bold tracking-wide text-white shadow-xl shadow-primary-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/40 no-underline">
+          <span class="truncate">View My Portfolio</span>
         </a>
-        <a href="#contact" class="px-7 py-3 rounded-full border-2 border-primary-400 text-primary-400 font-bold bg-transparent hover:bg-primary-400 hover:text-gray-950 transition-all duration-300 shadow focus:outline-none focus:ring-4 focus:ring-primary-400/50" aria-label="Contact me">
-          Contact Me
+        <a href="resume/kunj_resume.pdf" download="Kunj_Shah_Resume.pdf"
+          class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-transparent border-2 border-white/20 text-base font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 no-underline">
+          <span class="truncate">Download Resume</span>
         </a>
       </div>
-      <a href="#about" class="mt-6 sm:mt-8 flex flex-col items-center text-gray-400 hover:text-primary-400 transition animate-bounce">
-        <span class="text-xs mb-1">Scroll Down</span>
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-      </a>
     </div>
   </header>
 
   <section id="about" class="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative">
-    <div class="absolute inset-0 pointer-events-none select-none">
-      <div class="absolute right-2 top-2 w-24 h-24 sm:w-40 sm:h-40 bg-primary-500 opacity-10 rounded-full blur-2xl"></div>
-      <div class="absolute left-2 bottom-2 w-36 h-36 sm:w-56 sm:h-56 bg-yellow-400 opacity-10 rounded-full blur-3xl"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto px-2 sm:px-4">
-      <h2 class="text-center text-3xl xs:text-4xl sm:text-5xl font-extrabold mb-8 sm:mb-12 bg-gradient-to-r from-primary-400 to-yellow-400 bg-clip-text text-transparent">About Me</h2>
-      <div class="flex flex-col md:flex-row items-center gap-8 sm:gap-12">
-        <div class="flex-shrink-0 w-36 h-36 xs:w-48 xs:h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-lg border-4 border-primary-500 mb-6 md:mb-0">
-          <img src="images/kunj.jpg" alt="Kunj Shah - Full Stack Developer" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="flex-1 text-center md:text-left">
-          <h3 class="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Hello, I'm <span class="text-primary-400">Kunj Shah</span></h3>
-          <p class="text-base xs:text-lg sm:text-xl text-gray-300 mb-3 sm:mb-4">A passionate developer with expertise in web development, cybersecurity, and artificial intelligence. I enjoy solving complex problems and building innovative solutions using Python, JavaScript, Go, C/C++, and Java.</p>
-          <div class="grid grid-cols-2 xs:grid-cols-4 gap-4 sm:gap-6 my-6 sm:my-8">
-            <div class="text-center">
-              <div class="text-2xl xs:text-3xl font-bold text-primary-400">1+</div>
-              <div class="text-xs text-gray-400">Years Experience</div>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Profile Info -->
+        <div class="flex flex-col items-start">
+          <div class="flex items-center gap-6 mb-6">
+            <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-700 flex-shrink-0">
+              <img src="images/kunj.jpg" alt="Kunj Shah" class="w-full h-full object-cover">
             </div>
-            <div class="text-center">
-              <div class="text-2xl xs:text-3xl font-bold text-primary-400">10+</div>
-              <div class="text-xs text-gray-400">Projects</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl xs:text-3xl font-bold text-primary-400">5+</div>
-              <div class="text-xs text-gray-400">Tech Stack</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl xs:text-3xl font-bold text-primary-400">0</div>
-              <div class="text-xs text-gray-400">Awards</div>
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-2">Kunj Shah</h2>
+              <p class="text-lg text-primary-400 font-medium">Agentic AI & Data Engineering Enthusiast</p>
             </div>
           </div>
-          <a href="resume/kunj_resume.pdf" download class="inline-block px-6 py-3 xs:px-8 rounded-full bg-primary-500 text-white font-semibold shadow hover:bg-primary-600 transition">Download Resume</a>
+
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold text-white mb-4">About Me</h3>
+            <p class="text-gray-300 leading-relaxed mb-4">
+              I'm Kunj Shah, a passionate explorer in the exciting world of Agentic AI, AI/ML, and Data Engineering. My
+              journey began with a fascination for how intelligent systems can transform our lives, leading me to dive
+              deep into the core technologies that make it all possible. I'm particularly drawn to the potential of
+              agentic AI to create autonomous, adaptive solutions, and I'm eager to contribute to this rapidly evolving
+              field.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Skills & Tools</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">LangChain</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Supabase</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">APIs</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Data Analysis</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Machine Learning</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Deep Learning</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">NLP</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">SQL</span>
+              <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Cloud Computing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div>
+          <h3 class="text-xl font-bold text-white mb-6">Stats</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div
+              class="glass-card rounded-xl p-6 text-center bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40">
+              <div class="text-3xl font-bold text-white mb-2">10+</div>
+              <div class="text-gray-400 text-sm">Projects</div>
+            </div>
+            <div
+              class="glass-card rounded-xl p-6 text-center bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40">
+              <div class="text-3xl font-bold text-white mb-2">3</div>
+              <div class="text-gray-400 text-sm">Hackathons</div>
+            </div>
+            <div
+              class="glass-card rounded-xl p-6 text-center bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40">
+              <div class="text-3xl font-bold text-white mb-2">15</div>
+              <div class="text-gray-400 text-sm">AI Tools</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-24 bg-gradient-to-b from-gray-950 to-gray-900 relative">
-    <div class="absolute inset-0 pointer-events-none select-none">
-      <div class="absolute left-10 top-10 w-40 h-40 bg-primary-500 opacity-10 rounded-full blur-2xl animate-pulse"></div>
-      <div class="absolute right-10 bottom-10 w-56 h-56 bg-yellow-400 opacity-10 rounded-full blur-3xl animate-pulse"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4">
-      <h2 class="text-center text-4xl sm:text-5xl font-extrabold mb-12 bg-gradient-to-r from-primary-400 to-yellow-400 bg-clip-text text-transparent animate-fadeInUp">Experience</h2>
-      <!-- Timeline Desktop -->
-      <div class="hidden lg:block relative max-w-5xl mx-auto pt-10">
-        <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-400 to-yellow-400 rounded"></div>
-        <!-- Timeline Item 1 -->
-        <div class="mb-16 relative timeline-item animate-fadeInUp" style="animation-delay:0.1s">
-          <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1 w-7 h-7 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10 animate-pulse"></div>
-          <div class="w-5/12 ml-auto pl-16">
-            <div class="absolute top-0 left-1/2 -translate-y-1 flex items-center">
-              <div class="absolute left-8 glass-card px-4 py-2 rounded-full text-primary-400 font-semibold transition-all duration-300 hover:border-primary-500/30 hover:-translate-y-1">October 2024</div>
+  <!-- Learning Timeline Section -->
+  <section id="timeline" class="py-24 bg-gradient-to-b from-gray-950 to-gray-900 relative">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-center text-4xl font-bold text-white mb-4">My Academic Journey</h2>
+      <p class="text-center text-lg text-gray-400 mb-12">My educational path in Computer Science & Engineering at Indus
+        University.</p>
+
+      <div class="relative">
+        <!-- Vertical line -->
+        <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gray-700 transform md:-translate-x-px"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-12">
+          <!-- Started BTech CSE -->
+          <div class="relative flex items-center">
+            <div
+              class="absolute left-6 md:left-1/2 w-3 h-3 bg-primary-500 rounded-full transform -translate-x-1.5 md:-translate-x-1.5 z-10">
             </div>
-            <div class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300 animate-fadeInUp" style="animation-delay:0.2s">
-              <h3 class="text-2xl font-bold text-neutral-100 mb-1">Open Source AI Contributor</h3>
-              <h4 class="text-xl font-medium text-primary-400 mb-4">DevFest AI 2024</h4>
-              <p class="text-neutral-300 mb-4 leading-relaxed">Contributed to open source during DevFest AI 2024, a community-driven event focused on AI innovation. Developed and released an open source computer vision application that helps detect and prevent security vulnerabilities in real-time. The project received recognition for technical excellence and is now maintained as a community resource on GitHub.</p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-accent-500/30">AI Development</span>
-                <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">Open Source</span>
-                <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">GitHub</span>
+            <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8">
+              <div
+                class="glass-card rounded-xl p-6 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-8 h-8 bg-primary-500/20 rounded-lg flex items-center justify-center">
+                    <span class="text-primary-400 text-sm">🎓</span>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-white">Started BTech CSE</h3>
+                    <p class="text-sm text-gray-400">2023</p>
+                  </div>
+                </div>
+                <p class="text-gray-300 text-sm">Began Bachelor of Technology in Computer Science & Engineering at Indus
+                  University</p>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Timeline Item 2 -->
-        <div class="mb-16 relative timeline-item animate-fadeInUp" style="animation-delay:0.3s">
-          <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1 w-7 h-7 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10 animate-pulse"></div>
-          <div class="w-5/12 mr-auto pr-16">
-            <div class="absolute top-0 left-1/2 -translate-y-1 flex items-center">
-              <div class="absolute left-8 glass-card px-4 py-2 rounded-full text-primary-400 font-semibold transition-all duration-300 hover:border-primary-500/30 hover:-translate-y-1">October 2024</div>
+
+
+
+          <!-- Expected Graduation -->
+          <div class="relative flex items-center">
+            <div
+              class="absolute left-6 md:left-1/2 w-3 h-3 bg-blue-500 rounded-full transform -translate-x-1.5 md:-translate-x-1.5 z-10">
             </div>
-            <div class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300 animate-fadeInUp" style="animation-delay:0.4s">
-              <h3 class="text-2xl font-bold text-neutral-100 mb-1">Open Source Contributor</h3>
-              <h4 class="text-xl font-medium text-primary-400 mb-4">Hacktoberfest 2024</h4>
-              <p class="text-neutral-300 mb-4 leading-relaxed">Actively contributed to multiple open source projects during Hacktoberfest 2024. Submitted 6+ quality pull requests, focusing on improving documentation, fixing bugs, and implementing new features.</p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-accent-500/30">Open Source</span>
-                <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">Hacktoberfest</span>
-                <span class="px-3 py-1 rounded-full bg-primary-500/20 text-primary-300 text-sm backdrop-blur-sm transition-colors duration-300 hover:bg-primary-500/30">GitHub</span>
+            <div class="ml-16 md:ml-auto md:w-1/2 md:pl-8">
+              <div
+                class="glass-card rounded-xl p-6 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-blue-500/40">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <span class="text-blue-400 text-sm">�</span>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-white">Expected Graduation</h3>
+                    <p class="text-sm text-blue-400">2027</p>
+                  </div>
+                </div>
+                <p class="text-gray-300 text-sm">Bachelor's degree completion with specialization in AI & Data
+                  Engineering</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Timeline Mobile -->
-      <div class="lg:hidden relative max-w-5xl mx-auto pt-10">
-        <div class="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-400 to-yellow-400 rounded"></div>
-        <!-- Mobile Timeline Item 1 -->
-        <div class="ml-16 mb-12 relative timeline-item animate-fadeInUp" style="animation-delay:0.1s">
-          <div class="absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10 animate-pulse"></div>
-          <div class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300 animate-fadeInUp" style="animation-delay:0.2s">
-            <div class="text-primary-400 font-semibold mb-3">October 2024</div>
-            <h3 class="text-xl font-bold text-neutral-100 mb-1">Open Source AI Contributor</h3>
-            <h4 class="text-lg font-medium text-primary-400 mb-3">DevFest AI 2024</h4>
-            <p class="text-neutral-300 mb-3 text-sm leading-relaxed">Contributed to open source during DevFest AI 2024. Developed and released an open source computer vision application for security vulnerability detection.</p>
-          </div>
-        </div>
-        <!-- Mobile Timeline Item 2 -->
-        <div class="ml-16 mb-12 relative timeline-item animate-fadeInUp" style="animation-delay:0.3s">
-          <div class="absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-500 shadow-professional shadow-primary-500/30 z-10 animate-pulse"></div>
-          <div class="glass-card rounded-2xl p-6 shadow-professional border-primary-600/20 hover:border-primary-500/30 transition-all duration-300 animate-fadeInUp" style="animation-delay:0.4s">
-            <div class="text-primary-400 font-semibold mb-3">October 2024</div>
-            <h3 class="text-xl font-bold text-neutral-100 mb-1">Open Source Contributor</h3>
-            <h4 class="text-lg font-medium text-primary-400 mb-3">Hacktoberfest 2024</h4>
-            <p class="text-neutral-300 mb-3 text-sm leading-relaxed">Actively contributed to multiple open source projects during Hacktoberfest 2024. Submitted 6+ quality pull requests, focusing on improving documentation, fixing bugs, and implementing new features.</p>
           </div>
         </div>
       </div>
@@ -362,69 +440,69 @@
 
   <section id="projects" class="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative">
     <div class="absolute inset-0 pointer-events-none select-none">
-      <div class="absolute right-4 top-4 w-28 h-28 sm:w-40 sm:h-40 bg-primary-500 opacity-10 rounded-full blur-2xl"></div>
-      <div class="absolute left-4 bottom-4 w-36 h-36 sm:w-56 sm:h-56 bg-yellow-400 opacity-10 rounded-full blur-3xl"></div>
+      <div class="absolute right-4 top-4 w-28 h-28 sm:w-40 sm:h-40 bg-primary-500 opacity-10 rounded-full blur-2xl">
+      </div>
+      <div class="absolute left-4 bottom-4 w-36 h-36 sm:w-56 sm:h-56 bg-yellow-400 opacity-10 rounded-full blur-3xl">
+      </div>
     </div>
     <div class="relative max-w-6xl mx-auto px-2 sm:px-4">
-      <h2 class="text-center text-3xl xs:text-4xl sm:text-5xl font-extrabold mb-8 sm:mb-12 bg-gradient-to-r from-primary-400 to-yellow-400 bg-clip-text text-transparent">My Projects</h2>
-      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-        <!-- PAYMAN AI -->
-        <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="PAYMAN AI" class="h-48 w-full object-cover">
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2 text-primary-400">PAYMAN AI</h3>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">Python</span>
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">AI</span>
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">Property Management</span>
-            </div>
-            <p class="text-gray-300 mb-4 flex-1">AI-powered payment management system for property owners. Automated reminders, payment tracking, and analytics.</p>
-            <div class="flex gap-2 mt-auto">
-              <a href="https://github.com/KunjShah95/PAYMAN-AI-PROJECT" target="_blank" class="px-4 py-2 rounded-full bg-gray-900 text-white font-semibold hover:bg-primary-500 transition">Code</a>
-              <a href="https://payman-ai-project.vercel.app/" target="_blank" class="px-4 py-2 rounded-full border-2 border-primary-500 text-primary-400 font-semibold hover:bg-primary-500 hover:text-white transition">Live Demo</a>
-            </div>
-          </div>
-        </div>
-        <!-- Prime News -->
-        <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Prime News" class="h-48 w-full object-cover">
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2 text-primary-400">Prime News</h3>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">HTML</span>
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">CSS</span>
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">JavaScript</span>
-              <span class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold">News API</span>
-            </div>
-            <p class="text-gray-300 mb-4 flex-1">A modern, responsive news website featuring real-time news updates, categorized content, and an intuitive user interface. Built with vanilla web technologies and integrated with news APIs for fresh content delivery.</p>
-            <div class="flex gap-2 mt-auto">
-              <a href="https://github.com/KunjShah95/NEWS-WEBSITE" target="_blank" class="px-4 py-2 rounded-full bg-gray-900 text-white font-semibold hover:bg-primary-500 transition">Code</a>
-              <a href="https://primenews-eight.vercel.app/landing.html" target="_blank" class="px-4 py-2 rounded-full border-2 border-primary-500 text-primary-400 font-semibold hover:bg-primary-500 hover:text-white transition">Live Demo</a>
+      <h2
+        class="text-center text-4xl sm:text-5xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-primary-400 to-blue-400 bg-clip-text text-transparent">
+        My Projects</h2>
+      <p class="text-center text-lg text-gray-300 mb-10">A collection of my beginner-friendly AI and Data Engineering
+        projects.<br class="hidden sm:block">Hover over a project to see a live demo or preview.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div
+          class="glass-card rounded-2xl shadow-xl flex flex-col items-center p-7 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="PAYMAN AI" class="h-40 w-full object-cover rounded-xl mb-6">
+          <div class="w-full flex-1 flex flex-col items-center">
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">PAYMAN AI</h3>
+            <p class="text-gray-300 text-center mb-6 flex-1">AI-powered payment management system for property owners.
+              Automated reminders, payment tracking, and analytics.</p>
+            <div class="flex w-full gap-3 justify-center mt-auto">
+              <a href="https://github.com/KunjShah95/PAYMAN-AI-PROJECT" target="_blank"
+                class="btn btn-primary w-1/2">See Code</a>
+              <a href="https://payman-ai-project.vercel.app/" target="_blank" class="btn btn-outline w-1/2">Try Demo</a>
             </div>
           </div>
         </div>
-        <!-- Sentiment Analysis MCP -->
-        <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sentiment Analysis MCP" class="h-48 w-full object-cover">
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2 text-primary-400">Sentiment Analysis MCP</h3>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold">Python</span>
-              <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold">MCP</span>
-              <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold">NLP</span>
-              <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold">Sentiment Analysis</span>
+        <!-- Project 2 -->
+        <div
+          class="glass-card rounded-2xl shadow-xl flex flex-col items-center p-7 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Prime News" class="h-40 w-full object-cover rounded-xl mb-6">
+          <div class="w-full flex-1 flex flex-col items-center">
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Prime News</h3>
+            <p class="text-gray-300 text-center mb-6 flex-1">A modern, responsive news website featuring real-time news
+              updates, categorized content, and an intuitive user interface. Built with vanilla web technologies and
+              integrated with news APIs for fresh content delivery.</p>
+            <div class="flex w-full gap-3 justify-center mt-auto">
+              <a href="https://github.com/KunjShah95/NEWS-WEBSITE" target="_blank" class="btn btn-primary w-1/2">See
+                Code</a>
+              <a href="https://primenews-eight.vercel.app/landing.html" target="_blank"
+                class="btn btn-outline w-1/2">Try Demo</a>
             </div>
-            <p class="text-gray-300 mb-4 flex-1">
-              Model Context Protocol (MCP) server for sentiment analysis using advanced NLP techniques. Provides
-              real-time sentiment scoring and analysis capabilities.
-            </p>
-            <div class="flex justify-between items-center mt-auto gap-2">
-              <a href="https://github.com/KunjShah01/sentiment-analysis-mcp" target="_blank" class="action-btn">
-                <i class="fab fa-github mr-2"></i> Code
-              </a>
-              <a href="https://huggingface.co/spaces/kunjshah01/mcp-sentiment" target="_blank" class="action-btn">
-                Try Demo <i class="fas fa-external-link-alt ml-2"></i>
-              </a>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div
+          class="glass-card rounded-2xl shadow-xl flex flex-col items-center p-7 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Sentiment Analysis MCP" class="h-40 w-full object-cover rounded-xl mb-6">
+          <div class="w-full flex-1 flex flex-col items-center">
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Sentiment Analysis MCP</h3>
+            <p class="text-gray-300 text-center mb-6 flex-1">Model Context Protocol (MCP) server for sentiment analysis
+              using advanced NLP techniques. Provides real-time sentiment scoring and analysis capabilities.</p>
+            <div class="flex w-full gap-3 justify-center mt-auto">
+              <a href="https://github.com/KunjShah01/sentiment-analysis-mcp" target="_blank"
+                class="btn btn-primary w-1/2">See Code</a>
+              <a href="https://huggingface.co/spaces/kunjshah01/mcp-sentiment" target="_blank"
+                class="btn btn-outline w-1/2">Try Demo</a>
             </div>
           </div>
         </div>
@@ -536,7 +614,7 @@
                 class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://youtu.be/HaZXPO0VTlE" target="_blank class=" action-btn">
+              <a href="https://youtu.be/HaZXPO0VTlE" target="_blank" class="action-btn">
                 <i class="fas fa-video mr-1"></i> Demo
               </a>
             </div>
@@ -544,7 +622,9 @@
         </div>
 
         <!-- RL-A2A (last, not repeated) -->
-        <div class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-primary-700/30 hover:shadow-2xl hover:border-primary-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up" data-category="ai">
+        <div
+          class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-primary-700/30 hover:shadow-2xl hover:border-primary-400/60 transition-all duration-300 overflow-hidden animate-fade-in-up"
+          data-category="ai">
           <div class="relative overflow-hidden rounded-t-2xl h-56">
             <img src="images/A2A.png" alt="RL-A2A"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-neutral-900">
@@ -553,20 +633,23 @@
           <div class="p-7 flex flex-col h-80">
             <h3 class="text-2xl font-bold text-neutral-100 mb-2 drop-shadow-lg">RL-A2A</h3>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 rounded-full bg-primary-500/30 text-xs backdrop-blur-sm text-primary-200">Python</span>
-              <span class="px-2 py-1 rounded-full bg-primary-500/30 text-xs backdrop-blur-sm text-primary-200">Reinforcement Learning</span>
-              <span class="px-2 py-1 rounded-full bg-primary-500/30 text-xs backdrop-blur-sm text-primary-200">Robotics</span>
+              <span
+                class="px-2 py-1 rounded-full bg-primary-500/30 text-xs backdrop-blur-sm text-primary-200">Python</span>
+              <span
+                class="px-2 py-1 rounded-full bg-primary-500/30 text-xs backdrop-blur-sm text-primary-200">Reinforcement
+                Learning</span>
+              <span
+                class="px-2 py-1 rounded-full bg-primary-500/30 text-xs backdrop-blur-sm text-primary-200">Robotics</span>
             </div>
             <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">
-              Implementation of the A2A (Agent-to-Agent) protocol for multi-agent reinforcement learning, built from scratch in Python. Explores decentralized learning strategies.
+              Implementation of the A2A (Agent-to-Agent) protocol for multi-agent reinforcement learning, built from
+              scratch in Python. Explores decentralized learning strategies.
             </p>
             <div class="flex justify-between items-center mt-auto gap-2">
-              <a href="https://github.com/KunjShah95/RL-A2A" target="_blank"
-                class="action-btn">
+              <a href="https://github.com/KunjShah95/RL-A2A" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
               </a>
-              <a href="https://rla2a.vercel.app/" target="_blank"
-                class="action-btn">
+              <a href="https://rla2a.vercel.app/" target="_blank" class="action-btn">
                 Live Demo <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
@@ -669,8 +752,7 @@
           class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
           data-category="web">
           <div class="relative overflow-hidden rounded-t-2xl h-56">
-            <img
-              src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"
               alt="Student Hub"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
@@ -685,7 +767,8 @@
               <span
                 class="px-3 py-1 rounded-full bg-primary-500/20 text-xs text-primary-200 font-semibold tracking-wide">JavaScript</span>
             </div>
-            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">An interactive 3D web application showcasing 150+ premium student benefits worth $200K+.</p>
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">An interactive 3D web application showcasing 150+
+              premium student benefits worth $200K+.</p>
             <div class="flex justify-between items-center mt-auto gap-2">
               <a href="https://github.com/KunjShah95/StudentHub.com" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
@@ -702,8 +785,7 @@
           class="project-card group relative bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 rounded-2xl shadow-xl border border-neutral-800/40 hover:shadow-2xl hover:border-primary-500/40 transition-all duration-300 overflow-hidden"
           data-category="ai">
           <div class="relative overflow-hidden rounded-t-2xl h-56">
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
               alt="PromptVault"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 bg-neutral-900">
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
@@ -720,7 +802,9 @@
               <span
                 class="px-3 py-1 rounded-full bg-indigo-500/20 text-xs text-indigo-200 font-semibold tracking-wide">AI</span>
             </div>
-            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">The ultimate vault of prompt engineering resources - Discover, search, and explore the best curated collection of AI prompting guides, tools, courses, and communities.</p>
+            <p class="text-neutral-300 mb-6 line-clamp-3 flex-1">The ultimate vault of prompt engineering resources -
+              Discover, search, and explore the best curated collection of AI prompting guides, tools, courses, and
+              communities.</p>
             <div class="flex justify-between items-center mt-auto gap-2">
               <a href="https://github.com/KunjShah95/promptvault.dev" target="_blank" class="action-btn">
                 <i class="fab fa-github mr-2"></i> Code
@@ -736,7 +820,7 @@
   </section>
 
   <section id="skills" class="py-24 relative bg-gradient-to-b from-neutral-950 to-neutral-900">
-      <h1 class="text-3xl xs:text-4xl sm:text-5xl font-bold text-center text-neutral-100 mb-8 sm:mb-12">My Skills</h1>
+    <h1 class="text-3xl xs:text-4xl sm:text-5xl font-bold text-center text-neutral-100 mb-8 sm:mb-12">My Skills</h1>
     <div class="max-w-6xl mx-auto px-2 sm:px-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
       <!-- Skill Card 1: Frontend -->
       <div class="rounded-2xl glass-card p-8 flex flex-col items-center group hover:border-primary-500/30">
@@ -951,47 +1035,85 @@
       </div>
     </div>
 
-      <!-- Additional technical skills -->
-      <div class="mt-16 sm:mt-20">
-        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-center mb-8 sm:mb-10 text-neutral-200">
-          Additional
-          Technologies</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
-          <div
-            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
-            <i
-              class="fab fa-docker text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Docker</span>
-          </div>
-          <div
-            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
-            <i
-              class="fab fa-linux text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Linux</span>
-          </div>
-          <div
-            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
-            <i
-              class="fab fa-git-alt text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Git</span>
-          </div>
-          <div
-            class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
-            <i
-              class="fas fa-shield-alt text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-            <span class="font-medium text-neutral-300 text-xs sm:text-sm">Security</span>
-          </div>
+    <!-- Additional technical skills -->
+    <div class="mt-16 sm:mt-20">
+      <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-center mb-8 sm:mb-10 text-neutral-200">
+        Additional
+        Technologies</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div
+          class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+          <i
+            class="fab fa-docker text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="font-medium text-neutral-300 text-xs sm:text-sm">Docker</span>
+        </div>
+        <div
+          class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+          <i
+            class="fab fa-linux text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="font-medium text-neutral-300 text-xs sm:text-sm">Linux</span>
+        </div>
+        <div
+          class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+          <i
+            class="fab fa-git-alt text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="font-medium text-neutral-300 text-xs sm:text-sm">Git</span>
+        </div>
+        <div
+          class="rounded-xl py-4 sm:py-6 px-3 sm:px-4 glass-card flex flex-col items-center justify-center group hover:border-accent-500/30 transition-all duration-300 hover:-translate-y-1">
+          <i
+            class="fas fa-shield-alt text-2xl sm:text-4xl text-accent-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="font-medium text-neutral-300 text-xs sm:text-sm">Security</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Get in Touch Section -->
+  <section id="contact" class="py-24 bg-gradient-to-b from-gray-950 to-gray-900 relative">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's Connect</h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+          Ready to collaborate on your next AI project? Let's build something amazing together.
+        </p>
+
+        <!-- Social Media Icons - Centered -->
+        <div class="flex items-center justify-center gap-6">
+          <a href="https://github.com/KunjShah95" target="_blank"
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30 hover:scale-110">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://linkedin.com/in/kunjshah05" target="_blank"
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30 hover:scale-110">
+            <i class="fab fa-linkedin-in text-2xl"></i>
+          </a>
+          <a href="https://twitter.com/kunjshah_dev" target="_blank"
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30 hover:scale-110">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+          <a href="mailto:kunjkshah05@gmail.com"
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30 hover:scale-110">
+            <i class="fas fa-envelope text-2xl"></i>
+          </a>
+          <a href="https://huggingface.co/kunjshah01" target="_blank"
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30 hover:scale-110"
+            title="Hugging Face">
+            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"
+              class="w-8 h-8" style="filter: brightness(0) invert(1);" />
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  
-
   <footer class="relative bg-neutral-950/90 backdrop-blur-lg py-12 border-t border-primary-600/20">
     <div class="container mx-auto px-2 sm:px-6">
       <!-- Top Footer Content -->
-      <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-10 mb-6 sm:mb-12 footer-grid">
+      <div
+        class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-10 mb-6 sm:mb-12 footer-grid">
         <div class="text-center md:text-left">
           <h4 class="text-lg sm:text-xl font-bold font-display gradient-text mb-4 sm:mb-6">Kunj Shah</h4>
           <p class="text-neutral-400 mb-4 sm:mb-6 text-sm sm:text-base">Developer, Cybersecurity Learner and AI
@@ -1008,7 +1130,7 @@
               class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
               <i class="fab fa-linkedin-in text-sm sm:text-lg"></i>
             </a>
-            <a href="https://twitter.com/INDIA_KUNJ" target="_blank"
+            <a href="https://twitter.com/kunjshah_dev" target="_blank"
               class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-card border-primary-600/20 text-neutral-400 hover:text-neutral-900 hover:bg-primary-400 hover:border-primary-400 transition-all duration-300 hover:shadow-glow-primary">
               <i class="fab fa-twitter text-sm sm:text-lg"></i>
             </a>
