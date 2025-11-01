@@ -362,3 +362,66 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.debug('Chatbot elements not found');
   }
 });
+// Project Filter Functionality
+function initProjectFilters() {
+  const filterButtons = document.querySelectorAll('.tech-filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  if (filterButtons.length === 0 || projectItems.length === 0) {
+    return; // Exit if elements not found
+  }
+
+  // Animation timing constants to match CSS transitions
+  const SHOW_DELAY = 10; // Small delay to trigger CSS transition
+  const HIDE_DELAY = 300; // Match CSS transition duration
+
+  // Helper function to show a project with animation
+  function showProject(project) {
+    project.style.display = 'block';
+    setTimeout(() => {
+      project.style.opacity = '1';
+      project.style.transform = 'scale(1)';
+    }, SHOW_DELAY);
+  }
+
+  // Helper function to hide a project with animation
+  function hideProject(project) {
+    project.style.opacity = '0';
+    project.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      project.style.display = 'none';
+    }, HIDE_DELAY);
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+      
+      // Update active state
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active', 'bg-primary-500', 'text-white');
+        btn.classList.add('bg-neutral-800', 'text-gray-300');
+      });
+      this.classList.remove('bg-neutral-800', 'text-gray-300');
+      this.classList.add('active', 'bg-primary-500', 'text-white');
+      
+      // Filter projects
+      projectItems.forEach(project => {
+        const projectCategories = project.getAttribute('data-category') || '';
+        
+        if (category === 'all' || projectCategories.includes(category)) {
+          showProject(project);
+        } else {
+          hideProject(project);
+        }
+      });
+    });
+  });
+}
+
+// Initialize project filters when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProjectFilters);
+} else {
+  initProjectFilters();
+}
