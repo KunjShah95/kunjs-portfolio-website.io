@@ -1127,3 +1127,28 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* Project Filter Styles */
+.project-item {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tech-filter-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tech-filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.tech-filter-btn.active {
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.5);
+}
+
+#projects-grid {
+  min-height: 400px;
+}
