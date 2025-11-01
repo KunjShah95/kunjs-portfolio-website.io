@@ -371,6 +371,28 @@ function initProjectFilters() {
     return; // Exit if elements not found
   }
 
+  // Animation timing constants to match CSS transitions
+  const SHOW_DELAY = 10; // Small delay to trigger CSS transition
+  const HIDE_DELAY = 300; // Match CSS transition duration
+
+  // Helper function to show a project with animation
+  function showProject(project) {
+    project.style.display = 'block';
+    setTimeout(() => {
+      project.style.opacity = '1';
+      project.style.transform = 'scale(1)';
+    }, SHOW_DELAY);
+  }
+
+  // Helper function to hide a project with animation
+  function hideProject(project) {
+    project.style.opacity = '0';
+    project.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      project.style.display = 'none';
+    }, HIDE_DELAY);
+  }
+
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
       const category = this.getAttribute('data-category');
@@ -387,24 +409,10 @@ function initProjectFilters() {
       projectItems.forEach(project => {
         const projectCategories = project.getAttribute('data-category') || '';
         
-        if (category === 'all') {
-          project.style.display = 'block';
-          setTimeout(() => {
-            project.style.opacity = '1';
-            project.style.transform = 'scale(1)';
-          }, 10);
-        } else if (projectCategories.includes(category)) {
-          project.style.display = 'block';
-          setTimeout(() => {
-            project.style.opacity = '1';
-            project.style.transform = 'scale(1)';
-          }, 10);
+        if (category === 'all' || projectCategories.includes(category)) {
+          showProject(project);
         } else {
-          project.style.opacity = '0';
-          project.style.transform = 'scale(0.9)';
-          setTimeout(() => {
-            project.style.display = 'none';
-          }, 300);
+          hideProject(project);
         }
       });
     });
